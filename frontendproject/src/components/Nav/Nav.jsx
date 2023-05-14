@@ -1,16 +1,20 @@
-import '../../assets/sass/general.css'
+import logo from '../../assets/img/logo.png'
+import Btn from '../Btn/Btn';
+import '../../assets/sass/nav.css'
 
 function Nav(){
     return(
-        <div className="nav">
-            <div className="logo"><h1>&#123;Finsweet</h1></div>
-            <div>
+        <div className="header">
+            <div className="logo">
+                <img src={logo} alt='Finsweet Logo'></img>
+            </div>
+            <div className="nav">
                 <ul>
                     <li>Home</li>
                     <li>Blog</li>
                     <li>About Us</li>
                     <li>Contact Us</li>
-                    <li><button className="subs-btn">Subscribe</button></li>
+                    <li><Btn value="Subscribe"></Btn></li>
                 </ul>
                 
             </div>

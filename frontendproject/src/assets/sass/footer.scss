@@ -1,0 +1,70 @@
+@import './resets';
+@import './font';
+@import './variables';
+
+
+.footer-container{
+    @include body-01;
+    height: 560px;
+    background-color: $footer-bg;
+    color: $text-light;
+    display: flex;
+    flex-direction: column;
+    padding: 56px 80px;
+
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+        .nav{
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 24px;
+            };
+        }
+        .social{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+    }
+
+    .subs-box{
+        height: 256px;
+        background-color: rgba(256, 256, 256, 0.05);
+        margin: 56px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 80px 64px;
+        .subs-txt{
+            width: 50%;
+            h2{
+                color: $text-light;
+                margin-right: 64px;
+            }
+        }
+        .subs-form{
+            //width: 50%;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            .dark-input{
+                width: 300px;
+                height: 56px;
+                background-color: #4C4C4C;
+                border: 1px solid $text-medium;
+                color: $text-medium;
+                padding: 0px 24px;
+            }
+        }
+    }
+}
+
+
+
+

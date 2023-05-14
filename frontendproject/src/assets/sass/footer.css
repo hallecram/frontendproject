@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  list-style: none;
+}
+
+/*body{
+    min-height: 100vh;
+}*/
+@font-face {
+  font-family: "sen-regular";
+  src: url(../fonts/Sen-Regular.ttf);
+}
+@font-face {
+  font-family: "sen-bold";
+  src: url(../fonts/Sen-Bold.ttf);
+}
+@font-face {
+  font-family: "sen-extrabold";
+  src: url(../fonts/Sen-ExtraBold.ttf);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "sen-bold";
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 64px;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 48px;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+h6 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+p, li {
+  font-family: "sen-regular";
+}
+
+.footer-container {
+  font-family: "sen-regular";
+  font-size: 16px;
+  line-height: 28px;
+  height: 560px;
+  background-color: #232536;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 56px 80px;
+}
+.footer-container .footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-container .footer .logo {
+  display: flex;
+  align-items: center;
+}
+.footer-container .footer .nav ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.footer-container .footer .social {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.footer-container .subs-box {
+  height: 256px;
+  background-color: rgba(255, 255, 255, 0.05);
+  margin: 56px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 64px;
+}
+.footer-container .subs-box .subs-txt {
+  width: 50%;
+}
+.footer-container .subs-box .subs-txt h2 {
+  color: white;
+  margin-right: 64px;
+}
+.footer-container .subs-box .subs-form {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.footer-container .subs-box .subs-form .dark-input {
+  width: 300px;
+  height: 56px;
+  background-color: #4C4C4C;
+  border: 1px solid #6D6E76;
+  color: #6D6E76;
+  padding: 0px 24px;
+}/*# sourceMappingURL=footer.css.map */

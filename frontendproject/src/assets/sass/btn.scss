@@ -8,7 +8,7 @@
     background-color: $btn-bg;
     color: $text-dark;
     border: 0px;
-    margin: 0 auto;
+    @include btn-font;
     &:hover{
         background-color: $btn-bg-hover;
         cursor: pointer;
