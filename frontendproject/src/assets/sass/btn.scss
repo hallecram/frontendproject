@@ -1,0 +1,16 @@
+@import './resets';
+@import './font';
+@import './variables';
+
+.btn{
+    width: 180px;
+    height: 56px;
+    background-color: $btn-bg;
+    color: $text-dark;
+    border: 0px;
+    margin: 0 auto;
+    &:hover{
+        background-color: $btn-bg-hover;
+        cursor: pointer;
+    }
+}

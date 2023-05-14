@@ -1,8 +1,14 @@
-import './App.css';
+//import './App.css';
+import Nav from '../Nav/Nav';
+import Footer from '../Footer/Footer';
 
 function App() {
   return (
-    <h1>Teste</h1>
+    <div>
+      <Nav></Nav>
+      <br></br>
+      <Footer></Footer>
+    </div>
   );
 }
 
