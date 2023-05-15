@@ -1,0 +1,14 @@
+@import './resets';
+@import './font';
+@import './variables';
+
+.join-container{
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 128px 0;
+}

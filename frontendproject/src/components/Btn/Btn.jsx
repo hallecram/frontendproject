@@ -1,4 +1,4 @@
-import '../../assets/sass/btn.css'
+import '../../assets/sass/btn.scss'
 
 function Btn(props){
     return(

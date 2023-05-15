@@ -1,10 +1,11 @@
+import {Link} from "react-router-dom";
 import logo from '../../assets/img/logo.png';
 import fbIcon from '../../assets/img/fb.png';
 import twitterIcon from '../../assets/img/twitter.png';
 import instaIcon from '../../assets/img/insta.png';
 import linkedinIcon from '../../assets/img/linkedin.png'
 import Btn from '../Btn/Btn';
-import '../../assets/sass/footer.css'
+import '../../assets/sass/footer.scss'
 
 function Footer(){
     return(
@@ -15,11 +16,21 @@ function Footer(){
                 </div>
                 <div className="nav">
                     <ul>
-                        <li>Home</li>
-                        <li>Blog</li>
-                        <li>About Us</li>
-                        <li>Contact Us</li>
-                        <li>Privacy Policy</li>
+                        <li>
+                            <Link to="/" className="text-link">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/blog" className="text-link">Blog</Link>
+                        </li>
+                        <li>
+                            <Link to="/aboutus" className="text-link">About Us</Link>
+                        </li>
+                        <li>
+                            <Link to="/contact" className="text-link">Contact Us</Link>
+                        </li>
+                        <li>
+                            <Link to="/police" className="text-link">Privacy Policy</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
