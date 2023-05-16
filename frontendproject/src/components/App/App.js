@@ -13,7 +13,6 @@ function App() {
   return (
     <div>
       <Nav />
-      <br></br>
       <div>
            <Routes>
             <Route path="/" element={<Home />} />
@@ -23,7 +22,6 @@ function App() {
             <Route path="police" element={<Privpolice />} />
           </Routes>
       </div>
-      <br></br>
       <Join />
       <Footer />
     </div>

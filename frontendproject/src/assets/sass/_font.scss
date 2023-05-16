@@ -1,3 +1,5 @@
+@import './variables';
+
 //upload fonts
 @font-face{
     font-family: 'sen-regular';
@@ -20,6 +22,7 @@
     font-family: 'sen-bold';
     font-size: 48px;
     line-height: 64px;
+    margin: 24px 0;
 }
 
 @mixin body-01{
@@ -84,4 +87,9 @@ h6{
 //text
 p, li{
     font-family: 'sen-regular';
+    margin: 16px 0;
+}
+
+span{
+    color: $span;
 }
