@@ -1,9 +1,10 @@
 import Slider from "../components/Slider/Slider";
+import DataLoader from "../components/Slider/DataLoader";
 
 const Home = () => {
     return (
         <div>
-            <Slider />
+            <Slider slides={DataLoader}/>
         </div>
     )
 };
