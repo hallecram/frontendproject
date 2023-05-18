@@ -1,0 +1,28 @@
+@import "main.scss";
+
+.whystarted-container {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  .whystarted-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    position: relative;
+  }
+  .whystarted-txt {
+    width: 300px;
+    height: 300px;
+    padding: 80px;
+    position: abslute;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    .whystarted.cap {
+      text-transform: uppercase;
+    }
+    p {
+      @import body01;
+    }
+  }
+}
