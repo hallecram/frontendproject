@@ -52,7 +52,7 @@ const Slider = ({slides})=>{
                             </div>
                         </div>
                     );
-                })};
+                })}
                 {/* <div>
                     <div className="txt-slider">
                         <h6>POSTED ON <span>STARTUP</span></h6>

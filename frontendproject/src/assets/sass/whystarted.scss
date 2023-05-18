@@ -22,7 +22,7 @@
       text-transform: uppercase;
     }
     p {
-      @import body01;
+      @include body-01;
     }
   }
 }

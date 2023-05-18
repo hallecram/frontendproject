@@ -1,13 +1,12 @@
 import '../../assets/sass/whystarted.scss';
-import whystarted from '../../assets/img/whystarted.jpg'
+import whystarted from '../../assets/img/whystarted.png'
 import Btn from '../Btn/Btn'
    
-function Whystarted() => {
-       
+const Whystarted = () => {
     return (
         <div className="whystarted-container">
             <div className="whystarted-img">
-                <img src={whystarted} alt="Why We Started">
+                <img src={whystarted} alt="Why We Started"></img>
             </div>
             <div className="whystarted-txt">
                 <p className="whystarted-cap">Why we started</p>
