@@ -1,0 +1,25 @@
+@import "../sass/main.scss";
+
+.allposts-container {
+  width: 300px;
+  height: 600px;
+  .allposts-title {
+    display: flex;
+    justify-content: space-between;
+  }
+  .allposts-box {
+    .post-caption {
+      display: flex;
+      flex-direction: column;
+      .ftpost-label {
+        @include label;
+        .span {
+          color: §span;
+        }
+      }
+      .post-caption:hover {
+        background-color: $cat-bg-hover;
+      }
+    }
+  }
+}
