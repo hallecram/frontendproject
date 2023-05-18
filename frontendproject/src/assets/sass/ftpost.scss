@@ -1,0 +1,14 @@
+@import "../sass/main.scss";
+
+.ftpost-container {
+  .ftpost-box {
+    border: 1px solid $border;
+    padding: 32px;
+    .ftpost-img {
+      background-image: "../../assets/img/ftpost01.jpg";
+    }
+    .ftpost-label {
+      @import label;
+    }
+  }
+}
