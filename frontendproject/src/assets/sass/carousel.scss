@@ -1,0 +1,30 @@
+@import "../sass/main.scss";
+
+.carousel-container {
+    width: 100%;
+    height: auto;
+    .carousel-title {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+    .box-wrapper{
+        display: flex;
+        gap: 32px;
+        .carousel-box {
+            width: 25%;
+            height: 230px;
+            border: solid 1px $text-medium;
+            opacity: 0.3;        
+            .txt-wrapper {
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            }
+        &.carousel-box:hover {
+            background-color: $cat-bg-hover;
+            border: none;
+        }
+    }
+  }   
+}

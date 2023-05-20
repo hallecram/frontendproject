@@ -5,10 +5,12 @@ import Allposts from "../components/Allposts/Allposts";
 import Tabs from "../components/Tabs/Tabs";
 import Whystarted from "../components/Whystarted/Whystarted";
 import '../assets/sass/main.scss'
+import Carousel from "../components/Carousel/Carousel";
+import Authors from "../components/Authors/Authors";
 
 const Home = () => {
     return (
-        <div>
+        <div className="master-wrapper">
             <section className="slider-section">
                 <Slider slides={DataLoader}/>
             </section>
@@ -18,11 +20,14 @@ const Home = () => {
             <section className="tabs-section">
                 <Tabs />
             </section>
-
-            {/* carousel-section */}
-
+            <section className="carousel-section">
+                <Carousel />
+            </section>
             <section className="whystarted-section">
                 <Whystarted />
+            </section>
+            <section className="authors-section">
+                <Authors />
             </section>
         </div>
         

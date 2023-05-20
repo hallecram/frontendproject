@@ -1,28 +1,41 @@
 @import "main.scss";
 
 .whystarted-container {
-  width: 600px;
-  height: 400px;
+  width: 100%;
   position: relative;
   .whystarted-img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    position: relative;
+    width: 80%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    .img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
   }
   .whystarted-txt {
-    width: 300px;
-    height: 300px;
+    width: 45%;
+    height: auto;
+    background-color: $cat-bg;
     padding: 80px;
-    position: abslute;
+    position: absolute;
     bottom: 0;
     right: 0;
     z-index: 5;
-    .whystarted.cap {
-      text-transform: uppercase;
-    }
-    p {
-      @include body-01;
+    .txt-wrapper{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      //padding: 80px;
+      .whystarted-cap {
+        text-transform: uppercase;
+      }
+      p {
+        @include body-01;
+        white-space: normal;
+      }
     }
   }
 }

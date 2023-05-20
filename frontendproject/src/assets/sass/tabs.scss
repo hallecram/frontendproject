@@ -1,1 +1,29 @@
 @import "main.scss";
+
+.tabs-container {
+    width: 100%;
+    height: auto;
+    .tabs {
+      //width: 100%;
+      height: 25px;
+      display: flex;
+        .tab1 {
+            width: 15%;
+            background-color: white;
+        }
+        .tab2 {
+            width: 65%;
+            background-color: $btn-bg;
+        }
+        .tab3 {
+            width: 20%;
+            background-color: $span;
+        }
+    }
+    .tabs-output {
+    //width: auto;
+    height: 500px;
+    background-color: $tab-output-bg;
+    padding: 32px 100px 25px 32px;
+    }
+}

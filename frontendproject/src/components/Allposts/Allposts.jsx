@@ -9,7 +9,7 @@ const Allposts = () => {
           src: "../../assets/img/img01.jpg",
           description: "Slider 01",
           postedOn: "Travel",
-          title: "Where to Work in Berlin: Cafes & Coworking",
+          title: "8 Figma design systems that you can download for free todayS",
           author: "Floyd Miles",
           date: "November 15, 2022",
           caption:

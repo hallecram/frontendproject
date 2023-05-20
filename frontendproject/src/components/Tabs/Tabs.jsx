@@ -1,5 +1,5 @@
 import '../../assets/sass/tabs.scss';
-import { useState } from 'react';
+import { useState } from 'react';   
    
 const Tabs = () => {  
 
@@ -9,7 +9,7 @@ const [current, setCurrent] = useState(0);
 
     return (
         <div className="tabs-container">
-            <div>
+            <div className="tabs">
                 <div className="tab1"></div>
                 <div className="tab2"></div>
                 <div className="tab3"></div>

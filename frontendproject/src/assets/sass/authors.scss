@@ -1,0 +1,29 @@
+@import "../sass/main.scss";
+
+.aut-container {
+    width: 100%;
+    height: auto;
+    .aut-title {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+    .box-wrapper{
+        display: flex;
+        gap: 32px;
+        .aut-box {
+            width: 25%;
+            height: 230px;
+            background-color: $author-bg;
+            .txt-wrapper {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            }
+        &.aut-box:hover {
+            background-color: $author-bg-hover;
+        }
+    }
+  }   
+}
