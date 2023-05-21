@@ -1,9 +1,9 @@
-@import "../sass/main.scss";
+@import "../../assets/sass/main.scss";
 
-.aut-container {
+.carousel-container {
     width: 100%;
     height: auto;
-    .aut-title {
+    .carousel-title {
         display: flex;
         justify-content: center;
         margin-bottom: 32px;
@@ -11,18 +11,19 @@
     .box-wrapper{
         display: flex;
         gap: 32px;
-        .aut-box {
+        .carousel-box {
             width: 25%;
             height: 230px;
-            background-color: $author-bg;
+            border: solid 1px $text-medium;
+            opacity: 0.3;        
             .txt-wrapper {
-            padding: 40px;
+            padding: 32px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             }
-        &.aut-box:hover {
-            background-color: $author-bg-hover;
+        &.carousel-box:hover {
+            background-color: $cat-bg-hover;
+            border: none;
         }
     }
   }   

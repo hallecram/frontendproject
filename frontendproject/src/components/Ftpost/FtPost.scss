@@ -1,0 +1,28 @@
+@import "../../assets/sass/main.scss";
+
+.ftpost-container {
+  width: 60%;
+  h2{
+    margin-bottom: 32px;
+  }
+  .ftpost-box {
+    border: 1px solid $border;
+    padding: 32px;
+    .ftpost-img {
+      //width: 100%;
+      height: 350px;
+      background-image: url("../../assets/img/ftpost01.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    p{
+      margin: 16px 0;
+    }
+    .ftpost-label {
+      @include label;
+    }
+    .btn-wrapper{
+      padding-top: 24px;
+    }
+  }
+}

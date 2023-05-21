@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import '../../assets/sass/main.scss';
-import Nav from '../Nav/Nav';
+import Navbar from '../Navbar/Navbar';
 import Join from '../Join/Join';
 import Footer from '../Footer/Footer';
 import Home from '../../pages/Home';
@@ -12,7 +12,9 @@ import Privpolice from "../../pages/Privpolice";
 function App() {
   return (
     <div>
-      <Nav />
+      <div className="header">
+        <Navbar />
+      </div>
       <div>
            <Routes>
             <Route path="/" element={<Home />} />
@@ -23,7 +25,9 @@ function App() {
           </Routes>
       </div>
       <Join />
-      <Footer />
+      <div id="Footer">
+        <Footer />
+      </div>
     </div>
   );
 }

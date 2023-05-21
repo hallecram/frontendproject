@@ -1,0 +1,39 @@
+@import "../../assets/sass/main.scss";
+
+.allposts-container {
+  width: 40%;
+  height: auto;
+  .allposts-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  .allposts-box {
+    height: 600px;
+    overflow: hidden;
+    .post-caption {
+      //width: 100%;
+      height: auto;
+      background-color: $cat-bg;
+      padding: 32px 100px 25px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .ftpost-label {
+        @include label;
+        margin-bottom: 8px;
+        .span {
+          color: $span;
+        }
+      }
+      &.post-caption:hover {
+        background-color: $author-bg-hover;
+        cursor: pointer;
+      }
+    }
+  }
+  .allposts-box:hover{
+    overflow-y: scroll;
+  }
+}

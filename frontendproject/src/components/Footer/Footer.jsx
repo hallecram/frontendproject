@@ -1,11 +1,8 @@
 import {Link} from "react-router-dom";
 import logo from '../../assets/img/logo.png';
-import fbIcon from '../../assets/img/fb.png';
-import twitterIcon from '../../assets/img/twitter.png';
-import instaIcon from '../../assets/img/insta.png';
-import linkedinIcon from '../../assets/img/linkedin.png'
+import Social from "../Social/Social";
 import Btn from '../Btn/Btn';
-import '../../assets/sass/footer.scss'
+import './Footer.scss'
 
 function Footer(){
     return(
@@ -40,7 +37,7 @@ function Footer(){
                 </div>
                 <div className="subs-form">
                     <input className="dark-input" placeholder="Enter Your Email"></input>
-                    <Btn value="Subscribe"></Btn>
+                    <Btn value="Subscribe" color="btn"></Btn>
                 </div>                   
             </div>
             <div className="footer">
@@ -48,11 +45,8 @@ function Footer(){
                     <p>Finstreet 118 2561 Fintown</p>
                     <p>Hello@finsweet.com 020 7993 2905</p>
                 </div>
-                <div className="social">
-                    <img src={fbIcon} alt='Facebook Icon'></img>
-                    <img src={twitterIcon} alt='Twitter Icon'></img>
-                    <img src={instaIcon} alt='Instagram Icon'></img>
-                    <img src={linkedinIcon} alt='LinkedIn Icon'></img>
+                <div className="social-wrapper">
+                    <Social />
                 </div>
             </div>
         </div>

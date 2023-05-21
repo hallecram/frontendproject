@@ -1,8 +1,8 @@
-import '../../assets/sass/carousel.scss';
+import './Carousel.scss';
 import { useState } from 'react';
 import CatData from './CatData';
    
-function Carousel(categories){
+function Carousel({categories}){
     
     //useState para o slider
     const [current, setCurrent] = useState(0);

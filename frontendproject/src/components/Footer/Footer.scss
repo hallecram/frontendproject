@@ -1,6 +1,4 @@
-@import './resets';
-@import './font';
-@import './variables';
+@import '../../assets/sass/main.scss';
 
 
 .footer-container{
@@ -42,11 +40,6 @@
                     };
                 };
             };
-        }
-        .social{
-            display: flex;
-            align-items: center;
-            gap: 24px;
         }
     }
 

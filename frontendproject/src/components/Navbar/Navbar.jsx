@@ -1,11 +1,11 @@
 import {Link} from "react-router-dom";
 import logo from '../../assets/img/logo.png'
 import Btn from '../Btn/Btn';
-import '../../assets/sass/nav.scss'
+import './Navbar.scss'
 
-function Nav(){
+function Navbar(){
     return(
-        <div className="header">
+        <div className="nav-container">
             <div className="logo">
                 <img src={logo} alt='Finsweet Logo'></img>
             </div>
@@ -23,11 +23,11 @@ function Nav(){
                     <li>
                         <Link to="/contact" className="text-link">Contact Us</Link>
                     </li>
-                    <li><Btn value="Subscribe"></Btn></li>
+                    <li><a href="#Footer"><Btn value="Subscribe" color="btn-header" /></a></li>
                 </ul>
             </nav>
         </div>
     );
 }
 
-export default Nav;
+export default Navbar;

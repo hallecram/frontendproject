@@ -1,4 +1,4 @@
-import '../../assets/sass/tabs.scss';
+import './Tabs.scss';
 import { useState } from 'react';   
    
 const Tabs = () => {  

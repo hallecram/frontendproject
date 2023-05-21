@@ -1,16 +1,15 @@
-@import './resets';
-@import './font';
-@import './variables';
+@import '../../assets/sass/main.scss';
 
-.header{
+
+.nav-container{
     @include body-01;
     height: 80px;
+    padding: 12px 80px;
     background-color: $nav-bg;
     color: $text-light;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 80px;
     .logo{
         display: flex;
         align-items: center;

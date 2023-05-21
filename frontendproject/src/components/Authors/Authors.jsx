@@ -1,4 +1,4 @@
-import '../../assets/sass/authors.scss';
+import './Authors.scss';
 //import { useState } from 'react';
 //import CatData from './CatData';
    

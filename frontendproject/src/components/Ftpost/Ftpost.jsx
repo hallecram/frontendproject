@@ -1,5 +1,5 @@
-import '../../assets/sass/ftpost.scss';
-import Btn from '../../components/Btn/Btn';
+import './FtPost.scss';
+import Btn from '../Btn/Btn';
    
 const Ftpost = () => {
     const ftPostData = {
@@ -21,7 +21,9 @@ const Ftpost = () => {
                 <p className="ftpost-label">By <span>{ftPostData.author}</span> | {ftPostData.date}</p>
                 <h3>{ftPostData.title}</h3>
                 <p>{ftPostData.caption}</p>
-                <Btn value="Read more &gt;" />
+                <div className="btn-wrapper">
+                    <Btn value="Read more &gt;" color="btn" />
+                </div>
             </div>
         </div>
         

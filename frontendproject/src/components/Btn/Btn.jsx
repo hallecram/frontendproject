@@ -1,8 +1,9 @@
-import '../../assets/sass/btn.scss'
+import './Btn.scss'
 
 function Btn(props){
+    
     return(
-        <input type="button" className="btn" value={props.value}></input>
+        <button className={props.color}>{props.value}</button>
     );
 }
 

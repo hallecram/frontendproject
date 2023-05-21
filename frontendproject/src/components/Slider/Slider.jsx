@@ -1,6 +1,6 @@
-import '../../assets/sass/slider.scss';
+import './Slider.scss';
 import { useState } from 'react';
-import DataLoader from './DataLoader';
+import SliderData from './SliderData';
 import Btn from '../Btn/Btn';
 
 const Slider = ({slides})=>{
@@ -17,8 +17,8 @@ const Slider = ({slides})=>{
         setCurrent(current === 0 ? length - 1 : current - 1)
     };
 
-    //se o array não for o DataLoader ou se array não tiver valores
-    if (!Array.isArray(DataLoader) || slides.length <= 0){
+    //se o array não for o SliderData ou se array não tiver valores
+    if (!Array.isArray(SliderData) || slides.length <= 0){
         return null;
     }
             
@@ -33,21 +33,24 @@ const Slider = ({slides})=>{
                 <input type="button" value="next" id="nextBtn" onClick={nextSlide}></input>   
             </div>
             <div>
-                {DataLoader.map((currentSlide, index) => {
+                {SliderData.map((currentSlide, index) => {
                     return (
                         <div
                             className={index === current ? "currentSlide active" : "currentSlide"}
                             key={index}
                         >
                             {index === current && <img src={currentSlide.src} className="img-slider" alt={currentSlide.description}/>}
+                            <div className="img-gradient"></div>
                             <div className="txt-container">
                             {index === current && 
                                 <div className="txt-slider"> 
-                                    <h6>Posted on {currentSlide.postedOn}</h6>
-                                    <h2 className="display-txt">{currentSlide.title}</h2>
-                                    <p>By <span>{currentSlide.author}</span> | {currentSlide.date}</p>
-                                    <p>{currentSlide.caption}</p>
-                                    <Btn value="Read more &gt;" />
+                                    <div className="txt-wrapper">
+                                        <h6>Posted on <span>{currentSlide.postedOn}</span></h6>
+                                        <h2 className="display-txt">{currentSlide.title}</h2>
+                                        <p>By <span>{currentSlide.author}</span> | {currentSlide.date}</p>
+                                        <p>{currentSlide.caption}</p>
+                                    </div>
+                                    <Btn value="Read more &gt;" color="btn" />
                                 </div>}
                             </div>
                         </div>

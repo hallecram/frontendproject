@@ -22,7 +22,7 @@
     font-family: 'sen-bold';
     font-size: 48px;
     line-height: 64px;
-    margin: 24px 0;
+    margin: 24px 0 16px 0;
 }
 
 @mixin body-01{
@@ -35,6 +35,22 @@
     font-family: 'sen-regular';
     font-size: 14px;
     line-height: 20px;
+}
+
+@mixin cap-regular{
+    font-family: 'sen-regular';
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+@mixin cap{
+    font-family: 'sen-bold';
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 @mixin label{
@@ -85,7 +101,11 @@ h6{
 }
 
 //text
-p, a, li{
+p{
+    font-family: 'sen-regular';
+}
+
+a, li{
     font-family: 'sen-regular';
     margin: 16px 0;
 }
