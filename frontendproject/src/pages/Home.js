@@ -11,6 +11,7 @@ import Logo from "../components/Logo/Logo";
 import Testimonials from "../components/Testimonials/Testimonials";
 import TestData from "../components/Testimonials/TestData";
 import CatData from "../components/Carousel/CatData";
+import AutData from "../components/Authors/AutData";
 
 const Home = () => {
     return (
@@ -31,7 +32,7 @@ const Home = () => {
                 <SpecialPost />
             </section>
             <section className="authors-section">
-                <Authors />
+                <Authors authors={AutData}/>
             </section>
             <section className="logo-section">
                 <Logo />

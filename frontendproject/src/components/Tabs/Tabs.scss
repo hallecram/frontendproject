@@ -7,6 +7,7 @@
       //width: 100%;
       height: 25px;
       display: flex;
+      cursor: pointer;
         .tab1 {
             width: 15%;
             background-color: white;
@@ -24,6 +25,16 @@
     //width: auto;
     height: 500px;
     background-color: $tab-output-bg;
-    padding: 32px 100px 25px 32px;
+    .tab-wrapper{
+        padding: 32px 100px 25px 32px;
+        display: flex;
+        justify-content: space-between;
+        .cap{
+            @include cap;
+        }
+        p{
+            @include body-02
+        }
+    }
     }
 }

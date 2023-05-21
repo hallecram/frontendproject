@@ -9,17 +9,30 @@
         margin-bottom: 32px;
     }
     .box-wrapper{
+        width: 100%;
         display: flex;
-        gap: 32px;
         .aut-box {
-            width: 25%;
-            height: 230px;
+            width: 250px;
+            height: auto;
             background-color: $author-bg;
-            .txt-wrapper {
+            display: flex;
+            flex-direction: column;
+            //justify-content: space-between;
+            align-items: center;
             padding: 40px;
+            .txt-wrapper {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            img{
+                width: 128px;
+                height: 128px;
+                object-fit: contain;
+            }
+            p{
+                @include body-02;
+                color: $text-medium;
+            }
             }
         &.aut-box:hover {
             background-color: $author-bg-hover;
