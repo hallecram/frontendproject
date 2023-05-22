@@ -3,20 +3,52 @@ import { useState } from 'react';
 import AutData from './AutData';
 import Social from '../Social/Social'
    
-function Authors({authors}){
+const Authors = (props) => {
+    const {authors} = props;
 
-    //useState
-    const [current, setCurrent] = useState(0);
-    const length = authors.length;
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [length, setLength] = useState(authors.length);
 
-    //how many I wanna see?
-    //const show = 4;
+    useEffect(() => {
+        setLength(authors.length)
+    }, [authors])
 
-    //se o array não for o SliderData ou se array não tiver valores
-    if (!Array.isArray(AutData) || authors.length <= 0){
-        return null;
-    }
+    //callback functions para as setas
+    const nextCard = ()=>{
+        if(currentIndex < (length - 1)){
+            setCurrentIndex(prevState => prevState + 1)
+        }
+    };
+    const prevCard = ()=>{
+        if (currentIndex > 0) {
+            setCurrentIndex(prevState => prevState - 1)
+        }
+    };
 
+    return(
+        <div className="aut-container">
+            <div className="aut-title">
+                <h2>Authors</h2>
+            </div>
+            <div className="aut-wrapper">
+                <div className="box-wrapper">
+                    <div
+                    className="aut-box"
+                    style={{transform: `translateX(-${currentIndex * 100}%)`}}>
+                        {authors}
+                    </div>
+                </div>
+            </div>
+            <div className="arrows">
+                <button id="prevBtn" onClick={prevCard} className="Prev">Prev</button>
+                <button id="nextBtn" onClick={nextCard} className="Next">Next</button>
+            </div>
+        </div>  
+    )
+}
+
+
+    /*
     //callback functions para as setas
     const nextCard = ()=>{
         setCurrent(current === length - 1 ? 0 : current + 1)
@@ -25,35 +57,7 @@ function Authors({authors}){
         setCurrent(current === 0 ? length - 1 : current - 1)
     };
     
-    /*
-    const Author = ({id, photo, name, job}) => 
-        <div className="aut-box">
-            <div className="txt-wrapper" key={id}>
-            <img src={photo} alt={`photo of ${name}`} />
-            <h3>{name}</h3>
-            <p>{job}</p> 
-            </div>
-            <Social />
-        </div>
-
-    const AuthorList = AutData.map((currentAuthor, index) => {
-        return(
-            <div className={index === current ? "currentAuthor active" : "currentAuthor"}
-                key={index}>
-                {index === current &&
-                    <div className="aut-box" key={currentAuthor.index}>
-                        <div className="txt-wrapper" >
-                        <img src={currentAuthor.photo} alt={`photo of ${currentAuthor.name}`} />
-                        <h3>{currentAuthor.name}</h3>
-                        <p>{currentAuthor.job}</p> 
-                        </div>
-                        <Social />
-                    </div>
-                }
-            </div>
-        )
-    })
-    */
+  
 
     const AuthorList = AutData.map((element) => {
         const {id, photo, authorName, job} = element;
@@ -87,6 +91,7 @@ function Authors({authors}){
         </div>
     );
 }
+*/
 
 
 export default Authors
