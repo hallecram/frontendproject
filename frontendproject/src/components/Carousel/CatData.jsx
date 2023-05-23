@@ -1,48 +1,43 @@
-import business from '../../assets/img/business.png';
-import economy from '../../assets/img/economy.png';
-import startup from '../../assets/img/startup.png';
-import tecnology from '../../assets/img/tecnology.png';
-
 const CatData = [
   {
     id: 1,
-    photo: {business},
-    name: "Business",
+    photo: '../../assets/img/business.png',
+    catName: "Business",
     caption:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
   },
   {
     id: 2,
-    photo: {economy},
-    name: "Economy",
+    photo: '../../assets/img/economy.png',
+    catName: "Economy",
     caption:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
   },
   {
     id: 3,
-    photo: {startup},
-    name: "Startup",
+    photo: '../../assets/img/startup.png',
+    catName: "Startup",
     caption:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
   },
   {
     id: 4,
-    photo: {tecnology},
-    name: "Tecnology",
+    photo: '../../assets/img/tecnology.png',
+    catName: "Tecnology",
     caption:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
   },
   {
     id: 5,
-    photo: {economy},
-    name: "Travel",
+    photo: '../../assets/img/startup.png',
+    catName: "Travel",
     caption:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
   },
    {
     id: 6,
-    photo: {business},
-    name: "Others",
+    photo: '../../assets/img/business.png',
+    catName: "Others",
     caption:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
   },

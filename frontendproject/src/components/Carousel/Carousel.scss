@@ -3,28 +3,65 @@
 .carousel-container {
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: column;
     .carousel-title {
         display: flex;
         justify-content: center;
         margin-bottom: 32px;
     }
-    .box-wrapper{
+    .cat-wrapper{
         display: flex;
-        gap: 32px;
-        .carousel-box {
-            width: 25%;
-            height: 230px;
-            border: solid 1px $text-medium;
-            opacity: 0.3;        
-            .txt-wrapper {
-            padding: 32px;
+        height: auto;
+        .box-wrapper{
+            width: 100%;
+            height: calc(100% - 80px);
+            background-color: #fff;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            gap: 32px;
+            .carousel-box {
+                width: 25%;
+                height: 100%;
+                border: solid 1px $border;
+                //opacity: 0.3;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 32px;    
+                .txt-wrapper {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    .img-wrapper{
+                        width: 48px;
+                        height: 48px;
+                        background-color: $test-bg;
+                        border-radius: 5px;
+                        margin-bottom: 16px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    h3{
+                        margin-bottom: 4px;
+                    }
+                    p{
+                        @include body-02;
+                        color: $text-medium;
+                    }
+                }
+            &.carousel-box:hover {
+                background-color: $cat-bg-hover;
+                border: none;
             }
-        &.carousel-box:hover {
-            background-color: $cat-bg-hover;
-            border: none;
-        }
+            }
+            .hidden{
+                display: none;
+            }
+        }   
     }
-  }   
 }

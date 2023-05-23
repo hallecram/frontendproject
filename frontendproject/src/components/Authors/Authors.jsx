@@ -3,27 +3,54 @@ import { useState } from 'react';
 import AutData from './AutData';
 import Social from '../Social/Social'
    
-const Authors = (props) => {
-    const {authors} = props;
-
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [length, setLength] = useState(authors.length);
-
-    useEffect(() => {
-        setLength(authors.length)
-    }, [authors])
+const Authors = ({authors}) => {
+    
+    //useState para o carousel
+    const [currentCard, setCurrentCard] = useState(3);
+    //const length = authors.length;
 
     //callback functions para as setas
     const nextCard = ()=>{
-        if(currentIndex < (length - 1)){
-            setCurrentIndex(prevState => prevState + 1)
+        if(currentCard === (authors.length - 1)){
+            return
+        }
+        else{
+            setCurrentCard(currentCard => currentCard + 1)
         }
     };
     const prevCard = ()=>{
-        if (currentIndex > 0) {
-            setCurrentIndex(prevState => prevState - 1)
+        if (currentCard === 3) {
+            return
+        }
+        else{
+            setCurrentCard(currentCard => currentCard - 1)
         }
     };
+
+    //se o array não for o DataLoader ou se array não tiver valores
+    if (!Array.isArray(AutData) || authors.length <= 0){
+        return null;
+    }
+
+
+    //map para o conteudo do array
+    const AuthorList = AutData.map((element, index) => {
+        const {photo, authorName, job} = element;
+
+        return(
+            <div 
+                className={ currentCard === index || currentCard === index + 1 || currentCard === index + 2 || currentCard === index + 3 ? 'aut-box' : 'aut-box hidden' }
+                key={index}
+            >
+                <div className="txt-wrapper" >
+                <img src={photo} alt={authorName} />
+                <h3>{authorName}</h3>
+                <p>{job}</p> 
+                </div>
+                <Social />
+            </div>
+        )
+    })   
 
     return(
         <div className="aut-container">
@@ -32,11 +59,7 @@ const Authors = (props) => {
             </div>
             <div className="aut-wrapper">
                 <div className="box-wrapper">
-                    <div
-                    className="aut-box"
-                    style={{transform: `translateX(-${currentIndex * 100}%)`}}>
-                        {authors}
-                    </div>
+                        {AuthorList}
                 </div>
             </div>
             <div className="arrows">
@@ -72,10 +95,8 @@ const Authors = (props) => {
                 <Social />
             </div>
         )
-    })
+    })    
         
-        
-
     return (
         <div className="aut-container">
             <div className="aut-title">

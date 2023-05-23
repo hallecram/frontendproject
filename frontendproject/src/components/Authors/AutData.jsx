@@ -29,7 +29,7 @@ const AutData = [
     },
     {
       id: 5,
-      photo: '../../assets/img/jvallem.png',
+      photo: '../../assets/img/fmiles.png',
       authorName: "James Dean",
       job:
         "Content Writer @Company",
@@ -49,6 +49,6 @@ const AutData = [
         "Content Writer @Company",
     },
   ];
-  
+
   export default AutData;
   

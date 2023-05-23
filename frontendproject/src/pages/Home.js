@@ -14,6 +14,7 @@ import CatData from "../components/Carousel/CatData";
 import AutData from "../components/Authors/AutData";
 
 const Home = () => {
+
     return (
         <div className="master-wrapper">
             <section className="slider-section">
@@ -32,7 +33,7 @@ const Home = () => {
                 <SpecialPost />
             </section>
             <section className="authors-section">
-                <Authors authors={AutData}/>
+                <Authors authors={AutData} />
             </section>
             <section className="logo-section">
                 <Logo />

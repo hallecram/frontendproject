@@ -18,19 +18,28 @@
     }
     .test-wrapper{
         padding: 80px;
-        height: 100%;
+        height: auto;
         display: flex;
         .test-txt{
             width: 40%;
+            height: auto;
             .txt-wrapper{
                 display: flex;
                 flex-direction: column;
                 justify-content: left;
                 white-space: normal;
+                h2{
+                    margin-bottom: 16px;
+                }
+                p{
+                    @include body-01;
+                }
+                .test-cap{
+                    @include cap;
+                    margin-bottom: 12px;
+                }
             }
-            .test-cap{
-                @include cap
-            }
+
         }
         .test-hr{
             //height: 100%;
@@ -55,13 +64,16 @@
             width: 60%;
             height: 100%;
             position: relative;
-            z-index: 4;
+            z-index: 3;
             div{
+                width: 100%;
+                height: 100%;
                 .test-output{
+                    //width: 100%;
+                    //height: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    //align-items: space-between;
                     //gap: 120px;
                     .author-wrapper{
                         display: flex;

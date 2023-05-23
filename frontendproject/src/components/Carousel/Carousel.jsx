@@ -1,19 +1,29 @@
 import './Carousel.scss';
 import { useState } from 'react';
 import CatData from './CatData';
-   
+
 function Carousel({categories}){
     
     //useState para o slider
-    const [current, setCurrent] = useState(0);
-    const length = categories.length;
+    const [currentCard, setCurrentCard] = useState(3);
+    //const length = categories.length;
 
     //callback functions para as setas
-    const nextSlide = ()=>{
-        setCurrent(current === length - 1 ? 0 : current + 1)
+    const nextCard = ()=>{
+        if(currentCard === (categories.length - 1)){
+            return
+        }
+        else{
+            setCurrentCard(currentCard => currentCard + 1)
+        }
     };
-    const prevSlide = ()=>{
-        setCurrent(current === 0 ? length - 1 : current - 1)
+    const prevCard = ()=>{
+        if (currentCard === 3) {
+            return
+        }
+        else{
+            setCurrentCard(currentCard => currentCard - 1)
+        }
     };
 
     //se o array não for o DataLoader ou se array não tiver valores
@@ -21,56 +31,70 @@ function Carousel({categories}){
         return null;
     }
 
+    //map para o conteudo do array
+    const CatList = CatData.map((element, index) => {
+        const {photo, catName, caption} = element;
+
+        return(
+            <div 
+                className={ currentCard === index || currentCard === index + 1 || currentCard === index + 2 || currentCard === index + 3 ? 'carousel-box' : 'carousel-box hidden' }
+                key={index}
+            >
+                <div className="txt-wrapper">
+                    <div className="img-wrapper">
+                        <img src={photo} alt={`${catName}'s pic`}/>
+                    </div>
+                    <h3>{catName}</h3>
+                    <p>{caption}</p> 
+                </div>
+            </div>
+        )
+    })  
+
     return (
         <div className="carousel-container">
             <div className="carousel-title">
                 <h2>Choose a Category</h2>
             </div>
-            <div className="box-wrapper">
+            <div className="cat-wrapper">
+                <div className="box-wrapper">
+                    {CatList}
+                    {/*
+                    <div className="carousel-box">
+                        <div className="txt-wrapper">
+                            <img></img>
+                            <h3></h3>
+                            <p></p>
+                        </div>                    
+                    </div>
+                    <div className="carousel-box">
+                        <div className="txt-wrapper">
+                            <img></img>
+                            <h3></h3>
+                            <p></p>
+                        </div>  
+                    </div>
+                    <div className="carousel-box">
+                        <div className="txt-wrapper">
+                            <img></img>
+                            <h3></h3>
+                            <p></p>
+                        </div>  
+                    </div>
+                    <div className="carousel-box">
+                        <div className="txt-wrapper">
+                            <img></img>
+                            <h3></h3>
+                            <p></p>
+                        </div>  
+                    </div>
+                    */}
 
-                {/*
-                <div className="prev">
-
-                    /* img a substituir seta - prev
-
-                    <input type="button" value="prev" id="prevBtn" onClick={prevSlide}></input>
                 </div>
-                <div className="next">
-
-                    /* img a substituir seta - next
-
-                    <input type="button" value="next" id="nextBtn" onClick={nextSlide}></input>   
-                </div>
-                */}
-
-                <div className="carousel-box">
-                    <div className="txt-wrapper">
-                        <img></img>
-                        <h3></h3>
-                        <p></p>
-                    </div>                    
-                </div>
-                <div className="carousel-box">
-                    <div className="txt-wrapper">
-                        <img></img>
-                        <h3></h3>
-                        <p></p>
-                    </div>  
-                </div>
-                <div className="carousel-box">
-                    <div className="txt-wrapper">
-                        <img></img>
-                        <h3></h3>
-                        <p></p>
-                    </div>  
-                </div>
-                <div className="carousel-box">
-                    <div className="txt-wrapper">
-                        <img></img>
-                        <h3></h3>
-                        <p></p>
-                    </div>  
-                </div>
+            </div>
+            <div className="arrows">
+                <button id="prevBtn" onClick={prevCard} className="Prev">Prev</button>
+                <button id="nextBtn" onClick={nextCard} className="Next">Next</button>
             </div>
         </div>
     );

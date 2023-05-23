@@ -2,6 +2,7 @@
 
 .aut-container {
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     .aut-title {
@@ -10,49 +11,49 @@
         margin-bottom: 32px;
     }
     .aut-wrapper{
-        width: 100%;
         display: flex;
-        position: relative;
+        height: auto;
         .box-wrapper{
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        .aut-box {
-            width: 250px;
-            height: auto;
-            background-color: $author-bg;
+            width: 100%;
+            height: calc(100% - 80px);
+            background-color: #fff;
             display: flex;
-            transition: all 250ms linear;
-            flex-direction: column;
-            //justify-content: space-between;
-            align-items: center;
-            padding: 40px;
-
-            //hide scrollbar
-            -ms-overflow-style: none; //ie-edge
-            scrollbar-width: none; //firefox
-    
-            .txt-wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            img{
-                width: 128px;
-                height: 128px;
-                object-fit: contain;
+            flex-direction: row;
+            gap: 20px;
+            .aut-box {
+                width: 25%;
+                height: 100%;
+                background-color: $author-bg;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 40px;
+                .txt-wrapper {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 20px;
+                    img{
+                        width: 128px;
+                        height: 128px;
+                        object-fit: contain;
+                        margin-bottom: 20px;
+                    }
+                    p{
+                        @include body-02;
+                        color: $text-medium;
+                    }
+                }
             }
-            p{
-                @include body-02;
-                color: $text-medium;
+            .aut-box:hover {
+                background-color: $author-bg-hover;
             }
+            .hidden{
+                display: none;
             }
-        }
-        &.aut-box:hover {
-            background-color: $author-bg-hover;
-        }
-        .aut-box::-webkit-scrollbar{
-            display: none;
-        }
         }
     }
 }   
