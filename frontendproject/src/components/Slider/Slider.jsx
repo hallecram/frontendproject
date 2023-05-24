@@ -1,5 +1,6 @@
 import './Slider.scss';
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 import SliderData from './SliderData';
 import Btn from '../Btn/Btn';
 
@@ -50,7 +51,7 @@ const Slider = ({slides})=>{
                                         <p>By <span>{currentSlide.author}</span> | {currentSlide.date}</p>
                                         <p>{currentSlide.caption}</p>
                                     </div>
-                                    <Btn value="Read more &gt;" color="btn" />
+                                    <Link to="/post01"><Btn value="Read more &gt;" color="btn" /></Link>
                                 </div>}
                             </div>
                         </div>

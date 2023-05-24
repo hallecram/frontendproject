@@ -4,19 +4,21 @@ import FtPost from "../components/FtPost/FtPost";
 import AllPosts from "../components/Allposts/AllPosts";
 import Tabs from "../components/Tabs/Tabs";
 import SpecialPost from "../components/SpecialPost/SpecialPost";
-import '../assets/sass/main.scss'
 import Carousel from "../components/Carousel/Carousel";
 import Authors from "../components/Authors/Authors";
 import Logo from "../components/Logo/Logo";
 import Testimonials from "../components/Testimonials/Testimonials";
+import Join from "../components/Join/Join";
 import TestData from "../components/Testimonials/TestData";
 import CatData from "../components/Carousel/CatData";
 import AutData from "../components/Authors/AutData";
 
+import '../assets/sass/main.scss'
+
 const Home = () => {
 
     return (
-        <div className="master-wrapper">
+        <div>
             <section className="slider-section">
                 <Slider slides={SliderData}/>
             </section>
@@ -40,6 +42,9 @@ const Home = () => {
             </section>
             <section className="test-section">
                 <Testimonials tests={TestData} />
+            </section>
+            <section className="join-section">
+                <Join />
             </section>
         </div>
         

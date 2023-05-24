@@ -1,13 +1,14 @@
 import { Routes, Route } from "react-router-dom";
-import '../../assets/sass/main.scss';
 import Navbar from '../Navbar/Navbar';
-import Join from '../Join/Join';
 import Footer from '../Footer/Footer';
 import Home from '../../pages/Home';
 import Blog from '../../pages/Blog';
 import Aboutus from '../../pages/Aboutus';
 import Contact from '../../pages/Contact';
 import Privpolice from "../../pages/Privpolice";
+import Post01 from "../../pages/Post01";
+
+import '../../assets/sass/main.scss';
 
 function App() {
   return (
@@ -15,16 +16,16 @@ function App() {
       <div className="header">
         <Navbar />
       </div>
-      <div>
+      <div className="master-wrapper">
            <Routes>
             <Route path="/" element={<Home />} />
             <Route path="blog" element={<Blog />} />
             <Route path="aboutus" element={<Aboutus />} />
             <Route path="contact" element={<Contact />} />
             <Route path="police" element={<Privpolice />} />
+            <Route path="post01" element={<Post01 />} />
           </Routes>
       </div>
-      <Join />
       <div id="Footer">
         <Footer />
       </div>
