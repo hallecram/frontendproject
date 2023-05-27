@@ -1,0 +1,74 @@
+@import '../../assets/sass/main.scss';
+
+.post-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .post-author-wrapper{
+        width: 60%;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        .img-wrapper{
+            width: 48px;
+            height: 48px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .txt-wrapper{
+            h3{
+                color: $span;
+            }
+            p{
+                @include label-txt;
+            }
+        }
+    }
+    .post-title-wrapper{
+        width: 60%;
+        margin-top: 24px;
+        .post-cat-wrapper{
+            display: flex;
+            align-items: center;
+            margin: 16px 0;
+            img{
+                width: 24px;
+                height: 24px;
+                object-fit: scale-down;
+                margin-right: 8px;
+            }
+        }
+    }
+    .post-img-wrapper{
+        width: 1280px;
+        height: auto;
+        margin: 64px 0;
+        //position: absolute;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .post-body{
+        width: 60%;
+        height: auto;
+        article{
+            margin-bottom: 48px;
+            text-align: left;
+            h2{
+                margin-bottom: 16px;
+            }
+            p{
+                @include body-01;
+            }
+            li{
+                list-style: disc;
+            }
+        }
+    }
+}

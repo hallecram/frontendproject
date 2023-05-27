@@ -1,14 +1,11 @@
-import Join from "../components/Join/Join";
-import ReadNext from "../components/ReadNext/ReadNext";
+import './Post.scss'
 
-import '../assets/sass/post.scss'
-
-const Post01 = () => {
+const Post = () => {
     return (
         <div className="post-container">
             <div className="post-author-wrapper">
                 <div className="img-wrapper">
-                    <img src="" />
+                    <img src="../../assets/img/fmiles.png" />
                 </div>
                 <div className="txt-wrapper">
                     <h3>Andrew Johnson</h3>
@@ -18,12 +15,12 @@ const Post01 = () => {
             <div className="post-title-wrapper">
                 <h1>Step-by-step guide to choosing great font pairs</h1>
                 <div className="post-cat-wrapper">
-                    <img src="" />
+                    <img className="post-img" src="../../assets/img/startup.png"/>
                     <h4>Startup</h4>
                 </div>
             </div>
             <div className="post-img-wrapper">
-                <img src="" />
+                <img src="../../assets/img/post-01.png" />
             </div>
             <section className="post-body">
                 <article>
@@ -64,11 +61,9 @@ const Post01 = () => {
                 </article>
             </section>
             
-            <ReadNext />
-            <hr />
-            <Join />
+
         </div>
     )
 };
 
-export default Post01;
+export default Post;

@@ -4,9 +4,9 @@ import Footer from '../Footer/Footer';
 import Home from '../../pages/Home';
 import Blog from '../../pages/Blog';
 import Aboutus from '../../pages/Aboutus';
-import Contact from '../../pages/Contact';
+import ContactUs from '../../pages/ContactUs';
 import Privpolice from "../../pages/Privpolice";
-import Post01 from "../../pages/Post01";
+import BlogPost from "../../pages/BlogPost";
 
 import '../../assets/sass/main.scss';
 
@@ -20,13 +20,13 @@ function App() {
            <Routes>
             <Route path="/" element={<Home />} />
             <Route path="blog" element={<Blog />} />
-            <Route path="aboutus" element={<Aboutus />} />
-            <Route path="contact" element={<Contact />} />
+            <Route path="about" element={<Aboutus />} />
+            <Route path="contact" element={<ContactUs />} />
             <Route path="police" element={<Privpolice />} />
-            <Route path="post01" element={<Post01 />} />
+            <Route path="post" element={<BlogPost />} />
           </Routes>
       </div>
-      <div id="Footer">
+      <div id="Footer" className="footer">
         <Footer />
       </div>
     </div>

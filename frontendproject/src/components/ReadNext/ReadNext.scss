@@ -1,0 +1,44 @@
+@import '../../assets/sass/main.scss';
+
+.rnext-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    .rnext-title{
+        margin-bottom: 64px;
+    }
+    .rnext-posts-wrapper{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        .post-wrapper{
+            width: calc(100%/3);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .img-wrapper{
+                width: 100%;
+                height: 50%;
+                margin-bottom: 32px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .txt-wrapper{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                .label{
+                    @include label-txt;
+                }
+            }
+           
+        }
+    }
+}

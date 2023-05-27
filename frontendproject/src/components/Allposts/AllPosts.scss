@@ -21,7 +21,7 @@
       flex-direction: column;
       justify-content: center;
       .ftpost-label {
-        @include label;
+        @include label-txt;
         margin-bottom: 8px;
         .span {
           color: $span;

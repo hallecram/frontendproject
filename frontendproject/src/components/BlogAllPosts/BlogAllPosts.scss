@@ -1,0 +1,46 @@
+@import "../../assets/sass/main.scss";
+
+.allposts-container {
+  width: 100%;
+  height: auto;
+  margin-top: 80px;
+  .allposts-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  .allposts-box {
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    overflow: visible;
+    .post-caption {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 32px;
+      .img-wrapper{
+        width: 40%;
+        height: auto;
+        img{
+          object-fit: cover;
+        }
+      }
+      .txt-wrapper{
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        .cat-cap{
+          @include cap;
+          color: $span;
+        }
+      }
+    }
+  }
+}
