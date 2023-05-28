@@ -10,48 +10,140 @@
     z-index: 15;
 }
 
-.master-wrapper{
-    width: 1440px;
-    margin: 0 auto;
-    border: 1 solid #CCC;
-    position: relative;
-    top: 80px;
-    .posts-section{
-        margin: 80px;
+//desktop
+    .master-wrapper{
+        width: 1440px;
+        margin: 0 auto;
+        border: 1 solid #CCC;
+        position: relative;
+        top: 80px;
+        .posts-section{
+            margin: 80px;
+            display: flex;
+            gap: 32px;
+        }
+        .tabs-section{
+            margin: 80px;
+        }
+        .carousel-section{
+            margin: 80px;
+        }
+        .sp-section{
+            margin: 80px;
+        }
+        .authors-section{
+            margin: 80px;
+        }
+        .logo-section{
+            margin: 80px;
+        }
+        .test-section{
+            margin: 80px;
+        }
+        .join-section{
+            margin: 80px;
+        }
+        .post-section{
+            margin: 80px;
+        }
+        .readnext-section{
+            margin: 80px;
+        }
+        .contact-section{
+            margin: 80px;
+        }
+    }
+
+
+//mobile
+@media screen and (min-width: $mobile){
+    .master-wrapper{
+        width: 1440px;
+        margin: 0 auto;
+        border: 1 solid #CCC;
+        //position: relative;
+        //top: 80px;
         display: flex;
-        gap: 32px;
+        flex-flow: column wrap;
+        .posts-section{
+            margin: 80px;
+            display: flex;
+            flex-flow: column wrap;
+            //gap: 32px;
+        }
+        .tabs-section{
+            margin: 80px;
+        }
+        .carousel-section{
+            margin: 80px;
+        }
+        .sp-section{
+            margin: 80px;
+        }
+        .authors-section{
+            margin: 80px;
+        }
+        .logo-section{
+            margin: 80px;
+        }
+        .test-section{
+            margin: 80px;
+        }
+        .join-section{
+            margin: 80px;
+        }
+        .post-section{
+            margin: 80px;
+        }
+        .readnext-section{
+            margin: 80px;
+        }
+        .contact-section{
+            margin: 80px;
+        }
     }
-    .tabs-section{
-        margin: 80px;
-    }
-    .carousel-section{
-        margin: 80px;
-    }
-    .sp-section{
-        margin: 80px;
-    }
-    .authors-section{
-        margin: 80px;
-    }
-    .logo-section{
-        margin: 80px;
-    }
-    .test-section{
-        margin: 80px;
-    }
-    .join-section{
-        margin: 80px;
-    }
-    .post-section{
-        margin: 80px;
-    }
-    .readnext-section{
-        margin: 80px;
-    }
-    .contact-section{
-        margin: 80px;
-    }
+
 }
-
-
-
+//backup
+// .master-wrapper{
+//     width: 1440px;
+//     margin: 0 auto;
+//     border: 1 solid #CCC;
+//     position: relative;
+//     top: 80px;
+//     .posts-section{
+//         margin: 80px;
+//         display: flex;
+//         gap: 32px;
+//     }
+//     .tabs-section{
+//         margin: 80px;
+//     }
+//     .carousel-section{
+//         margin: 80px;
+//     }
+//     .sp-section{
+//         margin: 80px;
+//     }
+//     .authors-section{
+//         margin: 80px;
+//     }
+//     .logo-section{
+//         margin: 80px;
+//     }
+//     .test-section{
+//         margin: 80px;
+//     }
+//     .join-section{
+//         margin: 80px;
+//     }
+//     .post-section{
+//         margin: 80px;
+//     }
+//     .readnext-section{
+//         margin: 80px;
+//     }
+//     .contact-section{
+//         margin: 80px;
+//     }
+// }

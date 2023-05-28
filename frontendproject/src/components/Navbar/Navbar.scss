@@ -1,8 +1,9 @@
 @import '../../assets/sass/main.scss';
 
-
+//desktop
 .nav-container{
     @include body-01;
+    width: calc(100vw - 160px);
     height: 80px;
     padding: 12px 80px;
     background-color: $nav-bg;
@@ -38,9 +39,104 @@
             };
         };
     };
+    .hidden{
+        display: none;
+    }
+    .hamburger-toggle{
+        display: none;
+    }
 }
 
+//mobile
+@media screen and (max-width: $mobile){
+    .nav-container{
+        width: calc(100vmin - (8px + 1.5625vw));
+        padding: calc(8px + 1.5625vw);
+        display: flex;
+        justify-content: space-between;
+        .logo{
+            display: flex;
+            //align-items: flex-start;
+        }
+        .nav{
+            display: none;
+        }
+        .nav-overlay{
+            width: 100vmin;
+            height: auto;
+            background-color: $nav-bg;
+            color: $text-light;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            ul{
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 24px;
+                li{
+                    .text-link{
+                        color: $text-light;
+                        text-decoration: none;
+                    };
+                    .text-link:visited{
+                        color: $text-light;
+                        text-decoration: none;
+                    };
+                    .text-link:hover{
+                        color: $span-y;
+                        text-decoration: underline;
+                    };
+                    .text-link:active{
+                        color: $text-light;
+                        text-decoration: none;
+                    };
+                };
+            };
+        }
 
+        .hamburger-toggle{
+            display: flex;
+            //align-items: flex-end;
+            .hamburger{
+                width: 2rem;
+                height: 2rem;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-around;
+                flex-flow: column nowrap;
+                z-index: 16;
+                .burger{
+                    width: 2rem;
+                    height: 0.25rem;
+                    border-radius: 10px;
+                    background-color: white;
+                    transform-origin: 1px;
+                    transition: all 0.3s linear;
+                }
+                .line-1{
+                    transform: rotate(45deg);
+                }
+                .line-2{
+                    transform: translateX(100%);
+                    opacity: 0;
+                }
+                .line-3{
+                    transform: rotate(-45deg);
+                }
+            }
+            .hamburger-open{
+                display: flex;
+                //padding-top: 10px;
+                //margin-right: 10px;
+                cursor: pointer;
+                z-index: 16;
+            }
+        }
+        
+    }
+}
 
 
 

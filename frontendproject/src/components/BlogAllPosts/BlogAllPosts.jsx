@@ -17,12 +17,12 @@ const BlogAllPosts = () => {
         };
     
     return (
-        <div className="allposts-container">
-            <div className="allposts-title">
+        <div className="blog-allposts-container">
+            <div className="blog-allposts-title">
                 <h2>All Posts</h2>
             </div>
             <hr></hr>
-            <div className="allposts-box">
+            <div className="blog-allposts-box">
                 <div className="post-caption">
                     <div className="img-wrapper">
                         <img src={AllPostsData.src} /> 

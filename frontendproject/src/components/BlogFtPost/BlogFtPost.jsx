@@ -14,12 +14,12 @@ const BlogFtPost = () => {
     };
     
     return (
-        <div className="ftpost-container">
+        <div className="blogftpost-container">
             <div className="txt-wrapper">
                 <div>
                     <p className="cap">Featured Post</p>
                     <h2>{ftPostData.title}</h2>
-                    <p className="ftpost-label">By <span>{ftPostData.author}</span> | {ftPostData.date}</p>
+                    <p className="blogftpost-label">By <span>{ftPostData.author}</span> | {ftPostData.date}</p>
                     <p>{ftPostData.caption}</p>
                 </div>
                 <div className="btn-wrapper">
