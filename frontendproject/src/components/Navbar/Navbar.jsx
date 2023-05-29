@@ -56,7 +56,14 @@ function Navbar(){
                     <li>
                         <Link to="/contact" className="text-link">Contact Us</Link>
                     </li>
-                    <li><a href="#Footer"><Btn value="Subscribe" color="btn-header" /></a></li>
+                    <li>
+                        <Link to="/police" className="text-link">Privacy Policy</Link>
+                    </li>
+                    <li>
+                        <a href="#Footer">
+                            <Btn value="Subscribe" color="btn-header" />
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>

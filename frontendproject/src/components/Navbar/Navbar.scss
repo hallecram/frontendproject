@@ -3,9 +3,9 @@
 //desktop
 .nav-container{
     @include body-01;
-    width: calc(100vw - 160px);
+    width: calc(100% - 11.112vw);
     height: 80px;
-    padding: 12px 80px;
+    padding: 0.833vw 5.556vw;
     background-color: $nav-bg;
     color: $text-light;
     display: flex;
@@ -19,7 +19,7 @@
         ul{
             display: flex;
             align-items: center;
-            gap: 24px;
+            gap: 1.667vw;
             li{
                 .text-link{
                     color: $text-light;
@@ -30,7 +30,8 @@
                     text-decoration: none;
                 };
                 .text-link:hover{
-                    text-decoration: underline;
+                    color: $span-y;
+                    text-decoration: none;
                 };
                 .text-link:active{
                     color: $text-light;
@@ -50,8 +51,8 @@
 //mobile
 @media screen and (max-width: $mobile){
     .nav-container{
-        width: calc(100vmin - (8px + 1.5625vw));
-        padding: calc(8px + 1.5625vw);
+        min-width: $xs-mobile;
+        max-width: $mobile;
         display: flex;
         justify-content: space-between;
         .logo{
@@ -62,7 +63,9 @@
             display: none;
         }
         .nav-overlay{
-            width: 100vmin;
+            min-width: $xs-mobile;
+            width: 100%;
+            max-width: $mobile;
             height: auto;
             background-color: $nav-bg;
             color: $text-light;
@@ -71,11 +74,11 @@
             left: 0;
             ul{
                 display: flex;
-                flex-flow: column wrap;
+                flex-flow: column nowrap;
                 align-items: center;
-                justify-content: center;
                 gap: 24px;
                 li{
+
                     .text-link{
                         color: $text-light;
                         text-decoration: none;
@@ -128,8 +131,8 @@
             }
             .hamburger-open{
                 display: flex;
-                //padding-top: 10px;
-                //margin-right: 10px;
+                // padding-top: 10px;
+                // margin-right: 10px;
                 cursor: pointer;
                 z-index: 16;
             }
@@ -138,5 +141,51 @@
     }
 }
 
+//backup
+// .nav-container{
+//     @include body-01;
+//     max-width: calc(100vw - 160px);
+//     height: 80px;
+//     padding: 12px 80px;
+//     background-color: $nav-bg;
+//     color: $text-light;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     .logo{
+//         display: flex;
+//         align-items: center;
+//     }
+//     .nav{
+//         ul{
+//             display: flex;
+//             align-items: center;
+//             gap: 24px;
+//             li{
+//                 .text-link{
+//                     color: $text-light;
+//                     text-decoration: none;
+//                 };
+//                 .text-link:visited{
+//                     color: $text-light;
+//                     text-decoration: none;
+//                 };
+//                 .text-link:hover{
+//                     text-decoration: underline;
+//                 };
+//                 .text-link:active{
+//                     color: $text-light;
+//                     text-decoration: none;
+//                 };
+//             };
+//         };
+//     };
+//     .hidden{
+//         display: none;
+//     }
+//     .hamburger-toggle{
+//         display: none;
+//     }
+// }
 
-
+//calc(100vw - (8px + 1.5625vw))

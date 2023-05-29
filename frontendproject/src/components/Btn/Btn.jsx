@@ -4,7 +4,9 @@ function Btn(props){
     
     return(
         <div className={props.color}>
-            {props.value}
+            <div className="btn-txt-wrapper">
+                {props.value}
+            </div>
         </div>
     );
 }

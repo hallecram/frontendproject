@@ -1,15 +1,15 @@
 @import '../../assets/sass/main.scss';
 
-
+//desktop
 .footer-container{
     @include body-01;
+    width: calc(100% - 11.112vw);
     height: 560px;
     background-color: $footer-bg;
     color: $text-light;
     display: flex;
-    flex-direction: column;
-    padding: 56px 80px;
-
+    flex-flow: column nowrap;
+    padding: 3.889vw 5.556vw;
     .footer{
         display: flex;
         justify-content: space-between;
@@ -32,6 +32,7 @@
                         text-decoration: none;
                     };
                     .text-link:hover{
+                        color: $span-y;
                         text-decoration: underline;
                     };
                     .text-link:active{
@@ -42,20 +43,19 @@
             };
         }
     }
-
     .subs-box{
         height: 256px;
         background-color: rgba(256, 256, 256, 0.05);
-        margin: 56px 0px;
+        margin: 3.889vw 0px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 80px 64px;
+        padding: 5.556vw 4.444vw;
         .subs-txt{
             width: 50%;
             h2{
                 color: $text-light;
-                margin-right: 64px;
+                margin-right: 4.444vw;
             }
         }
         .subs-form{
@@ -66,10 +66,46 @@
             .dark-input{
                 width: 300px;
                 height: 56px;
-                background-color: #4C4C4C;
+                background-color: transparent;
                 border: 1px solid $text-medium;
                 color: $text-medium;
-                padding: 0px 24px;
+                padding: 0px 1.667vw;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: $mobile){
+    .footer-container{
+        height: auto;
+        .footer{
+            flex-flow: column wrap;
+            align-items: center;
+            gap: 24px;
+            :first-child{
+                text-align: center;
+            }
+            .logo{
+                justify-content: center;
+                margin-bottom: 3.889vw;
+            }
+            .nav{
+                display: none;
+            }
+        }
+        .subs-box{
+            height: auto;
+            flex-flow: column nowrap;
+            .subs-txt{
+                width: 100%;
+                h2{
+                    text-align: center;
+                    margin-bottom: 3.889vw;
+                }
+            }
+            .subs-form{
+                flex-flow: column nowrap;
             }
         }
     }
@@ -78,3 +114,78 @@
 
 
 
+
+//backup
+// .footer-container{
+//     @include body-01;
+//     height: 560px;
+//     background-color: $footer-bg;
+//     color: $text-light;
+//     display: flex;
+//     flex-direction: column;
+//     padding: 56px 80px;
+
+//     .footer{
+//         display: flex;
+//         justify-content: space-between;
+//         .logo{
+//             display: flex;
+//             align-items: center;
+//         }
+//         .nav{
+//             ul{
+//                 display: flex;
+//                 align-items: center;
+//                 gap: 24px;
+//                 li{
+//                     .text-link{
+//                         color: $text-light;
+//                         text-decoration: none;
+//                     };
+//                     .text-link:visited{
+//                         color: $text-light;
+//                         text-decoration: none;
+//                     };
+//                     .text-link:hover{
+//                         text-decoration: underline;
+//                     };
+//                     .text-link:active{
+//                         color: $text-light;
+//                         text-decoration: none;
+//                     };
+//                 };
+//             };
+//         }
+//     }
+
+//     .subs-box{
+//         height: 256px;
+//         background-color: rgba(256, 256, 256, 0.05);
+//         margin: 56px 0px;
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         padding: 80px 64px;
+//         .subs-txt{
+//             width: 50%;
+//             h2{
+//                 color: $text-light;
+//                 margin-right: 64px;
+//             }
+//         }
+//         .subs-form{
+//             //width: 50%;
+//             display: flex;
+//             align-items: center;
+//             gap: 24px;
+//             .dark-input{
+//                 width: 300px;
+//                 height: 56px;
+//                 background-color: #4C4C4C;
+//                 border: 1px solid $text-medium;
+//                 color: $text-medium;
+//                 padding: 0px 24px;
+//             }
+//         }
+//     }
+// }

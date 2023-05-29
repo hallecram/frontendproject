@@ -7,7 +7,7 @@
     background-color: $btn-bg;
     color: $text-dark;
     border: 0px;
-    padding: 0 48px;
+    //padding: 0 48px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,6 @@
     background-color: $subs-bg;
     color: $text-dark;
     border: 0px;
-    padding: 0 48px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,4 +32,8 @@
         background-color: $btn-bg-hover;
         cursor: pointer;
     }
+}
+
+.btn-txt-wrapper{
+    padding: 0 48px;
 }

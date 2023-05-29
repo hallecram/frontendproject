@@ -1,13 +1,14 @@
 @import "../../assets/sass/main.scss";
 
+//display
 .ftpost-container {
   width: 60%;
   h2{
-    margin-bottom: 32px;
+    margin-bottom: 2.222vw;
   }
   .ftpost-box {
     border: 1px solid $border;
-    padding: 32px;
+    padding: 2.222vw;
     .ftpost-img {
       //width: 100%;
       height: 350px;
@@ -16,13 +17,65 @@
       background-size: cover;
     }
     p{
-      margin: 16px 0;
+      margin: 1.111vw 0;
     }
     .ftpost-label {
       @include label-txt;
     }
     .btn-wrapper{
-      padding-top: 24px;
+      width: 300px;
+      padding-top: 1.667vw;
     }
   }
 }
+
+//mobile
+@media screen and (max-width: $mobile){
+  .ftpost-container {
+    min-width: $xs-mobile;
+    max-width: $mobile;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    .ftpost-box {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 12px;
+      .ftpost-img {
+        width: 100%;
+      }
+      .btn-wrapper{
+        width: auto;
+      }
+    }
+  }
+}
+
+
+//backup
+// .ftpost-container {
+//   width: 60%;
+//   h2{
+//     margin-bottom: 32px;
+//   }
+//   .ftpost-box {
+//     border: 1px solid $border;
+//     padding: 32px;
+//     .ftpost-img {
+//       //width: 100%;
+//       height: 350px;
+//       background-image: url("../../assets/img/ftpost01.png");
+//       background-repeat: no-repeat;
+//       background-size: cover;
+//     }
+//     p{
+//       margin: 16px 0;
+//     }
+//     .ftpost-label {
+//       @include label-txt;
+//     }
+//     .btn-wrapper{
+//       padding-top: 24px;
+//     }
+//   }
+// }

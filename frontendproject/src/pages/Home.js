@@ -19,12 +19,15 @@ const Home = () => {
 
     return (
         <div>
+            {/*
             <section className="slider-section">
                 <Slider slides={SliderData}/>
             </section>
+            */}
             <section className="posts-section">
                 <FtPost /><AllPosts />
             </section>
+            {/*
             <section className="tabs-section">
                 <Tabs />
             </section>
@@ -46,6 +49,7 @@ const Home = () => {
             <section className="join-section">
                 <Join />
             </section>
+            */}
         </div>
         
     )

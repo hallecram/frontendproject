@@ -8,7 +8,7 @@ import ContactUs from '../../pages/ContactUs';
 import Privpolice from "../../pages/Privpolice";
 import BlogPost from "../../pages/BlogPost";
 
-import '../../assets/sass/main.scss';
+import './App.scss';
 
 function App() {
   return (
