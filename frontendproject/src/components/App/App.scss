@@ -16,9 +16,9 @@
     position: relative;
     top: 80px;
     .posts-section{
-        padding: calc(8px + 1.5625vw);
+        padding: 0.833vw 5.556vw;
         display: flex;
-        gap: 32px;
+        gap: 64px;
     }
 //     .tabs-section{
 //         margin: 5.556vw;
@@ -26,21 +26,21 @@
 //     .carousel-section{
 //         margin: 5.556vw;
 //     }
-//     .sp-section{
-//         margin: 5.556vw;
-//     }
+    .sp-section{
+        margin: 5.556vw;
+    }
 //     .authors-section{
 //         margin: 5.556vw;
 //     }
-//     .logo-section{
-//         margin: 5.556vw;
-//     }
+    .logo-section{
+        margin: 5.556vw;
+    }
 //     .test-section{
 //         margin: 5.556vw;
 //     }
-//     .join-section{
-//         margin: 5.556vw;
-//     }
+    .join-section{
+        margin: 5.556vw;
+    }
 //     .post-section{
 //         margin: 5.556vw;
 //     }

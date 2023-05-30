@@ -1,21 +1,62 @@
 @import '../../assets/sass/main.scss';
 
+//desktop
 .logo-container{
     width: 100%;
+    padding: 0.833vw 0;
     height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .logo-txt{
+    .logo-wrapper{
         display: flex;
-        flex-direction: column;
-        justify-content: left;
-        p{
-            @include body-02;
-            margin: 0;
+        flex-flow: row wrap;
+        gap: 24px;
+        justify-content: space-evenly;
+        align-items: center;
+        .logo-txt{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            p{
+                @include body-02;
+                margin: 0;
+            }
+            h4{
+                color: $text-medium;
+            }
         }
-        h4{
-            color: $text-medium;
+    }
+    
+}
+
+//mobile
+@media screen and (max-width: $mobile){
+    .logo-container{
+        min-width: $xs-mobile;
+        max-width: $mobile;
+        padding: 0.833vw 0;
+        .logo-wrapper{
+            width: 100%;
         }
     }
 }
+
+
+//backup
+// .logo-container{
+//     width: 100%;
+//     height: auto;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     .logo-txt{
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: left;
+//         p{
+//             @include body-02;
+//             margin: 0;
+//         }
+//         h4{
+//             color: $text-medium;
+//         }
+//     }
+// }

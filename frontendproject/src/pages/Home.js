@@ -34,22 +34,29 @@ const Home = () => {
             <section className="carousel-section">
                 <Carousel categories={CatData} />
             </section>
+            */}
+
             <section className="sp-section">
                 <SpecialPost />
             </section>
+            {/*
             <section className="authors-section">
                 <Authors authors={AutData} />
             </section>
+            */}
             <section className="logo-section">
                 <Logo />
             </section>
+            {/*
             <section className="test-section">
                 <Testimonials tests={TestData} />
             </section>
+            */}
             <section className="join-section">
                 <Join />
             </section>
-            */}
+
+
         </div>
         
     )
