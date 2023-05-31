@@ -7,15 +7,15 @@ import Btn from '../Btn/Btn';
 const Slider = ({slides})=>{
 
     //useState para o slider
-    const [current, setCurrent] = useState(0);
+    const [currentSlide, setCurrentSlide] = useState(0);
     const length = slides.length;
 
     //callback functions para as setas
     const nextSlide = ()=>{
-        setCurrent(current === length - 1 ? 0 : current + 1)
+        setCurrentSlide(currentSlide === length - 1 ? 0 : currentSlide + 1)
     };
     const prevSlide = ()=>{
-        setCurrent(current === 0 ? length - 1 : current - 1)
+        setCurrentSlide(currentSlide === 0 ? length - 1 : currentSlide - 1)
     };
 
     //se o array não for o SliderData ou se array não tiver valores
@@ -34,24 +34,26 @@ const Slider = ({slides})=>{
                 <input type="button" value="next" id="nextBtn" onClick={nextSlide}></input>   
             </div>
             <div>
-                {SliderData.map((currentSlide, index) => {
+                {SliderData.map((slideElement, index) => {
                     return (
                         <div
-                            className={index === current ? "currentSlide active" : "currentSlide"}
+                            className={index === currentSlide ? "current-slide active" : "current-slide"}
                             key={index}
                         >
-                            {index === current && <img src={currentSlide.src} className="img-slider" alt={currentSlide.description}/>}
+                            {index === currentSlide && <img src={slideElement.src} className="img-slider" alt={slideElement.description}/>}
                             <div className="img-gradient"></div>
                             <div className="txt-container">
-                            {index === current && 
+                            {index === currentSlide && 
                                 <div className="txt-slider"> 
                                     <div className="txt-wrapper">
-                                        <h6>Posted on <span>{currentSlide.postedOn}</span></h6>
-                                        <h2 className="display-txt">{currentSlide.title}</h2>
-                                        <p>By <span>{currentSlide.author}</span> | {currentSlide.date}</p>
-                                        <p>{currentSlide.caption}</p>
+                                        <h6>Posted on <span>{slideElement.postedOn}</span></h6>
+                                        <h2 className="display-txt">{slideElement.title}</h2>
+                                        <p>By <span>{slideElement.author}</span> | {slideElement.date}</p>
+                                        <p>{slideElement.caption}</p>
                                     </div>
-                                    <Link to="/post01"><Btn value="Read more &gt;" color="btn" /></Link>
+                                    <div className="slider-btn-wrapper">
+                                        <Link to="/post01"><Btn value="Read more &gt;" color="btn" /></Link>
+                                    </div>
                                 </div>}
                             </div>
                         </div>

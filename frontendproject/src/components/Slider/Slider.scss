@@ -20,11 +20,11 @@
         background: radial-gradient(circle, transparent, #000 60%);
         opacity: 0.7;
     }
-    .currentSlide {
+    .current-slide {
         transition-duration: 0.5s ease;
         opacity: 0;
     }
-    .currentSlide.active{
+    .current-slide.active{
         opacity: 1;
         transition-duration: 0.5s;
     }
@@ -62,6 +62,9 @@
                     @include display;
                     text-align: left;
                 }
+            }
+            .slider-btn-wrapper{
+                width: 30%;
             }
         } 
     }

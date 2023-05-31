@@ -5,43 +5,25 @@ import TestData from './TestData';
 function Testimonials({tests}){
 
     //useState para o slider
-    const [current, setCurrent] = useState(0);
+    const [currentTest, setCurrentTest] = useState(0);
     const length = tests.length;
 
     //callback functions para as setas
-    const nextSlide = ()=>{
-        setCurrent(current === length - 1 ? 0 : current + 1)
+    const nextTest = ()=>{
+        setCurrentTest(currentTest === length - 1 ? 0 : currentTest + 1)
     };
-    const prevSlide = ()=>{
-        setCurrent(current === 0 ? length - 1 : current - 1)
+    const prevTest = ()=>{
+        setCurrentTest(currentTest === 0 ? length - 1 : currentTest - 1)
     };
 
     return(
         <div className="test-container">
-
-            {/* SETAS */}
-            <div className="test-arrows">
-                <div className="arrows-wrapper">
-                    <div className="prev">
-                        {/* img a substituir seta - prev*/}
-                        <input type="button" value="prev" id="prevBtn" onClick={prevSlide}></input>
-                    </div>
-                    <div className="next">
-                        {/* img a substituir seta - next*/}
-                        <input type="button" value="next" id="nextBtn" onClick={nextSlide}></input>   
-                    </div>
-                </div>
-            </div>
-
             <div className="test-wrapper">
-                
                 {/* DIV MAIS À ESQ */}
                 <div className="test-txt">
-                    <div className="txt-wrapper">
                         <p className="test-cap">Testimonials</p>
                         <h2>What people say about our blog</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
                 </div>
 
                 {/* VERTICAL LINE */}
@@ -51,32 +33,42 @@ function Testimonials({tests}){
 
                 {/* OUTPUT */}
                 <div className="output-container">
-                    {TestData.map((currentSlide, index) => {
+                    {TestData.map((testElement, index) => {
                         return(
                             <div
-                                className={index === current ? "currentSlide active" : "currentSlide"}
+                                className={index === currentTest ? "current-test active" : "current-test hidden"}
                                 key={index}
                             >
-                                {index === current && 
+                                {index === currentTest && 
                                     <div className="test-output">
                                         <div className="cap-wrapper">
-                                            <h4>{currentSlide.cap}</h4>
+                                            <h4>{testElement.cap}</h4>
                                         </div>
                                         <div className="author-wrapper">
                                             <div className="img-wrapper">
-                                                <img src={currentSlide.photo} className="img-test" alt={currentSlide.description}/>
+                                                <img src={testElement.photo} className="img-test" alt={testElement.description}/>
                                             </div>
                                             <div className="author-test">
-                                                <h4>{currentSlide.author}</h4>
-                                                <p>{currentSlide.location}</p>
+                                                <h4>{testElement.author}</h4>
+                                                <p>{testElement.location}</p>
                                             </div>
                                         </div>
-                                    </div>
-                                }
+                                    </div>}
                             </div>
                         )
                     })}
+                </div>
             </div>
+            {/* SETAS */}
+            <div className="test-arrows">
+                <div className="arrows-wrapper">
+                    <div className="prev">
+                        <img src="../../assets/img/arrow.svg" className="prev-arrow" alt="prevArrow" onClick={prevTest}/>
+                    </div>
+                    <div className="next">
+                        <img src="../../assets/img/arrow.svg" className="next-arrow" alt="nextArrow" onClick={nextTest}/>
+                    </div>
+                </div>
             </div>
             
             

@@ -19,7 +19,7 @@ const Home = () => {
 
     return (
         <div>
-            {/*
+            {/*}
             <section className="slider-section">
                 <Slider slides={SliderData}/>
             </section>
@@ -27,10 +27,12 @@ const Home = () => {
             <section className="posts-section">
                 <FtPost /><AllPosts />
             </section>
-            {/*
+
             <section className="tabs-section">
                 <Tabs />
             </section>
+            
+            {/*
             <section className="carousel-section">
                 <Carousel categories={CatData} />
             </section>
@@ -47,11 +49,9 @@ const Home = () => {
             <section className="logo-section">
                 <Logo />
             </section>
-            {/*
             <section className="test-section">
                 <Testimonials tests={TestData} />
             </section>
-            */}
             <section className="join-section">
                 <Join />
             </section>
