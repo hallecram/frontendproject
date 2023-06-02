@@ -1,9 +1,11 @@
 @import '../../assets/sass/main.scss';
 
+
+//desktop 1440px
 .contact-container{
     width: 100%;
     height: auto;
-    padding: 80px 0;
+    padding: 5.556vw 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,24 +14,24 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 32px;
+        margin-bottom: 2.222vw;
         .contact-cap{
             @include cap;
-            margin-bottom: 16px;
+            margin-bottom: 1.111vw;
         }
         h1{
-            margin-bottom: 24px;
+            margin-bottom: 1.667vw;
         }
     }
     .contact-box{
-        width: calc(60% - 128px);
+        width: calc(60% - 8.889vw);
         color: $text-light;
         background-color: $span;
         border-radius: 8px;
-        padding: 64px;
-        margin-bottom: 32px;
+        padding: 4.444vw;
+        margin-bottom: 2.222vw;
         display: flex;
-        gap: 48px;
+        gap: 3.333vw;
         .info-box{
             width: 50%;
             p{
@@ -38,7 +40,7 @@
             hr{
                 border: 1px solid $text-light;
                 opacity: 0.1;
-                margin: 16px 0;
+                margin: 1.111vw 0;
             }
         }
     }
@@ -49,21 +51,21 @@
             flex-direction: column;
             .input{
                 @include body-01;
-                width: calc(100% - 48px);
+                width: calc(100% - 3.333vw);
                 height: auto;
                 background-color: transparent;
                 border: 1px solid $border;
                 border-radius: 8px;
-                margin: 8px 0;
-                padding: 24px;
+                margin: 0.556vw 0;
+                padding: 1.667vw;
             }
             .btn{
                 width: 100%;
                 height: auto;
                 border: 1px solid $span-y;
                 border-radius: 8px;
-                margin: 8px 0;
-                padding: 24px;
+                margin: 0.556vw 0;
+                padding: 1.667vw;
             }
             .select{
                 @include body-01;
@@ -71,10 +73,116 @@
                 height: auto;
                 border: 1px solid $border;
                 border-radius: 8px;
-                margin: 8px 0;
-                padding: 24px;
+                margin: 0.556vw 0;
+                padding: 1.667vw;
             }
         }
-        }
-        
+    }
 }
+
+//mobile
+@media screen and (max-width: $mobile){
+    .contact-container{
+        min-width: $xs-mobile;
+        max-width: $mobile;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .contact-title{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-box{
+            width: calc(100% - 8.889vw);
+            .info-box{
+                width: 100%;
+            }
+        }
+        .contact-form{
+            width: 100%;
+        }
+    }
+}
+
+
+//backup
+// .contact-container{
+//     width: 100%;
+//     height: auto;
+//     padding: 80px 0;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     .contact-title{
+//         width: 60%;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         margin-bottom: 32px;
+//         .contact-cap{
+//             @include cap;
+//             margin-bottom: 16px;
+//         }
+//         h1{
+//             margin-bottom: 24px;
+//         }
+//     }
+//     .contact-box{
+//         width: calc(60% - 128px);
+//         color: $text-light;
+//         background-color: $span;
+//         border-radius: 8px;
+//         padding: 64px;
+//         margin-bottom: 32px;
+//         display: flex;
+//         gap: 48px;
+//         .info-box{
+//             width: 50%;
+//             p{
+//                 @include body-02
+//             }
+//             hr{
+//                 border: 1px solid $text-light;
+//                 opacity: 0.1;
+//                 margin: 16px 0;
+//             }
+//         }
+//     }
+//     .contact-form{
+//         width: 60%;
+//         form{
+//             display: flex;
+//             flex-direction: column;
+//             .input{
+//                 @include body-01;
+//                 width: calc(100% - 48px);
+//                 height: auto;
+//                 background-color: transparent;
+//                 border: 1px solid $border;
+//                 border-radius: 8px;
+//                 margin: 8px 0;
+//                 padding: 24px;
+//             }
+//             .btn{
+//                 width: 100%;
+//                 height: auto;
+//                 border: 1px solid $span-y;
+//                 border-radius: 8px;
+//                 margin: 8px 0;
+//                 padding: 24px;
+//             }
+//             .select{
+//                 @include body-01;
+//                 width: 100%;
+//                 height: auto;
+//                 border: 1px solid $border;
+//                 border-radius: 8px;
+//                 margin: 8px 0;
+//                 padding: 24px;
+//             }
+//         }
+//         }
+        
+// }

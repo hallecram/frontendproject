@@ -10,11 +10,9 @@
     z-index: 15;
 }
 .master-wrapper{
-    width: calc(100vw - (8px + 1.5625vw));
-    margin: 0 auto;
+    width: 100%;
     border: 1 solid #CCC;
     position: relative;
-    top: 80px;
     .posts-section{
         padding: 0.833vw 5.556vw;
         display: flex;
@@ -23,15 +21,18 @@
     .tabs-section{
         padding: 5.556vw;
     }
-//     .carousel-section{
-//         margin: 5.556vw;
-//     }
+    .carousel-section{
+        margin: 5.556vw;
+    }
     .sp-section{
         padding: 5.556vw;
     }
-//     .authors-section{
-//         margin: 5.556vw;
-//     }
+    // .authors-section{
+    //     margin: 5.556vw;
+    // }
+    // .mobile-authors-section{
+    //     margin: 5.556vw;
+    // }
     .logo-section{
         padding: 5.556vw;
     }
@@ -41,15 +42,15 @@
     .join-section{
         padding: 5.556vw;
     }
-//     .post-section{
-//         margin: 5.556vw;
-//     }
-//     .readnext-section{
-//         margin: 5.556vw;
-//     }
-//     .contact-section{
-//         margin: 5.556vw;
-//     }
+    .post-section{
+        padding: 5.556vw;
+    }
+    .readnext-section{
+        padding: 5.556vw;
+    }
+    .contact-section{
+        padding: 5.556vw;
+    }
 }
 .footer{
     width: 100%;
@@ -68,6 +69,9 @@
             display: flex;
             flex-flow: column nowrap;
         }
+    }
+    .footer{
+        padding: 1.667vw 0;
     }
 }
 
@@ -115,3 +119,6 @@
 //         margin: 80px;
 //     }
 // }
+
+
+//    width: calc(100vw - (8px + 1.5625vw));

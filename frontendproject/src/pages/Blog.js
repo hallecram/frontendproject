@@ -14,10 +14,12 @@ const Blog = () => {
             <section>
                 <BlogAllPosts />
             </section>
+            {/*}
             <section>
                 <Carousel categories={CatData} />
             </section>
-            <section>
+            */}
+            <section className="join-section">
                 <Join />
             </section>
         </div>

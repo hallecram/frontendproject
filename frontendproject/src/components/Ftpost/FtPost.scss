@@ -33,6 +33,7 @@
 @media screen and (max-width: $mobile){
   .ftpost-container {
     min-width: $xs-mobile;
+    width: 100%;
     max-width: $mobile;
     display: flex;
     flex-flow: column nowrap;

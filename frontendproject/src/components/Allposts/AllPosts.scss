@@ -3,7 +3,7 @@
 //desktop
 .allposts-container {
   width: 40%;
-  height: auto;
+  height: 100%;
   .allposts-title {
     display: flex;
     justify-content: space-between;
@@ -11,11 +11,11 @@
     margin-bottom: 2.222vw;
   }
   .allposts-box {
-    height: 600px;
+    height: 700px;
     overflow: hidden;
     .post-caption {
       //width: 100%;
-      height: auto;
+      height: 150px;
       background-color: $cat-bg;
       padding: 2.222vw 6.944vw 1.736vw 2.222vw;
       display: flex;
@@ -44,13 +44,12 @@
 @media screen and (max-width: $mobile){
   .allposts-container {
     min-width: $xs-mobile;
+    width: 100%;
     max-width: $mobile;
     height: auto;
     .allposts-box {
-      height: 600px;
-      overflow: hidden;
       .post-caption {
-        height: 200px;
+        height: 150px;
       }
     }
   }

@@ -27,17 +27,14 @@ const Home = () => {
             <section className="posts-section">
                 <FtPost /><AllPosts />
             </section>
-
             <section className="tabs-section">
                 <Tabs />
             </section>
-            
             {/*
             <section className="carousel-section">
                 <Carousel categories={CatData} />
             </section>
             */}
-
             <section className="sp-section">
                 <SpecialPost />
             </section>
@@ -55,10 +52,7 @@ const Home = () => {
             <section className="join-section">
                 <Join />
             </section>
-
-
         </div>
-        
     )
 };
 
