@@ -5,7 +5,7 @@
 .contact-container{
     width: 100%;
     height: auto;
-    padding: 5.556vw 0;
+    padding: 5.556vmax 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,22 +14,22 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 2.222vw;
+        margin-bottom: 2.222vmax;
         .contact-cap{
             @include cap;
-            margin-bottom: 1.111vw;
+            margin-bottom: 1.111vmax;
         }
         h1{
-            margin-bottom: 1.667vw;
+            margin-bottom: 1.667vmax;
         }
     }
     .contact-box{
-        width: calc(60% - 8.889vw);
+        width: calc(60% - 8.889vmax);
         color: $text-light;
         background-color: $span;
         border-radius: 8px;
-        padding: 4.444vw;
-        margin-bottom: 2.222vw;
+        padding: 4.444vmax;
+        margin-bottom: 2.222vmax;
         display: flex;
         gap: 3.333vw;
         .info-box{
@@ -40,7 +40,7 @@
             hr{
                 border: 1px solid $text-light;
                 opacity: 0.1;
-                margin: 1.111vw 0;
+                margin: 1.111vmax 0;
             }
         }
     }
@@ -51,21 +51,21 @@
             flex-direction: column;
             .input{
                 @include body-01;
-                width: calc(100% - 3.333vw);
+                width: calc(100% - 3.333vmax);
                 height: auto;
                 background-color: transparent;
                 border: 1px solid $border;
                 border-radius: 8px;
-                margin: 0.556vw 0;
-                padding: 1.667vw;
+                margin: 0.556vmax 0;
+                padding: 1.667vmax;
             }
             .btn{
                 width: 100%;
                 height: auto;
                 border: 1px solid $span-y;
                 border-radius: 8px;
-                margin: 0.556vw 0;
-                padding: 1.667vw;
+                margin: 0.556vmax 0;
+                padding: 1.667vmax;
             }
             .select{
                 @include body-01;
@@ -73,8 +73,8 @@
                 height: auto;
                 border: 1px solid $border;
                 border-radius: 8px;
-                margin: 0.556vw 0;
-                padding: 1.667vw;
+                margin: 0.556vmax 0;
+                padding: 1.667vmax;
             }
         }
     }

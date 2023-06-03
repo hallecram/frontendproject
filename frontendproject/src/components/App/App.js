@@ -8,23 +8,36 @@ import ContactUs from '../../pages/ContactUs';
 import Privpolice from "../../pages/Privpolice";
 import BlogPost from "../../pages/BlogPost";
 
+import PostData from "../../assets/data/PostData";
+
 import './App.scss';
 
 function App() {
+
   return (
     <div>
       <div className="header">
         <Navbar />
       </div>
       <div className="master-wrapper">
-           <Routes>
+          <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="blog" element={<Blog />} />
+            <Route path="blog" element={<Blog />}>
+              {PostData.map((postElement, postId)=>{
+                const linkTo = `post${postId}`;
+                return(
+                  <Route key={postId} path={linkTo} exact element={
+                    <BlogPost linkTo={{linkTo}} />
+                  } />
+                )
+              })}
+            </Route>
             <Route path="about" element={<Aboutus />} />
             <Route path="contact" element={<ContactUs />} />
             <Route path="police" element={<Privpolice />} />
-            <Route path="post" element={<BlogPost />} />
           </Routes>
+
+          
       </div>
       <div id="Footer" className="footer">
         <Footer />

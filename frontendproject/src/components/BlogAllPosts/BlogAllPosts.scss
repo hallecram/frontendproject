@@ -5,15 +5,15 @@
   .blog-allposts-container {
     //width: 100%;
     height: auto;
-    padding: 5.556vw;
+    padding: 5.556vmax;
     .blog-allposts-title {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 2.222vw;
+      margin-bottom: 2.222vmax;
     }
     .blog-allposts-box {
-      margin-top: 4.444vw;
+      margin-top: 4.444vmax;
       display: flex;
       flex-direction: column;
       gap: 64px;
