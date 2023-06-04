@@ -11,6 +11,7 @@ const PostData = [
         category: "Startup",
         imgPost: "../../assets/img/img01.jpg",
         altImgPost: "imgPost1",
+        postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
         postSubtitle2: 
@@ -38,6 +39,7 @@ const PostData = [
         category: "Travel",
         imgPost: "../../assets/img/img01.jpg",
         altImgPost: "imgPost2",
+        postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
         postSubtitle2: 
@@ -65,6 +67,7 @@ const PostData = [
         category: "Technology",
         imgPost: "../../assets/img/img01.jpg",
         altImgPost: "imgPost3",
+        postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
         postSubtitle2: 
@@ -92,6 +95,7 @@ const PostData = [
         category: "Economy",
         imgPost: "../../assets/img/img01.jpg",
         altImgPost: "imgPost4",
+        postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
         postSubtitle2: 
@@ -119,6 +123,7 @@ const PostData = [
         category: "Business",
         imgPost: "../../assets/img/img01.jpg",
         altImgPost: "imgPost5",
+        postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
         postSubtitle2: 
@@ -146,6 +151,7 @@ const PostData = [
         category: "Startup",
         imgPost: "../../assets/img/img01.jpg",
         altImgPost: "imgPost6",
+        postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
         postSubtitle2: 
@@ -173,6 +179,7 @@ const PostData = [
         category: "Business",
         imgPost: "../../assets/img/img01.jpg",
         altImgPost: "imgPost7",
+        postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
         postSubtitle2: 
@@ -200,6 +207,7 @@ const PostData = [
         category: "Travel",
         imgPost: "../../assets/img/img01.jpg",
         altImgPost: "imgPost8",
+        postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
         postSubtitle2: 
@@ -227,6 +235,7 @@ const PostData = [
         category: "Economy",
         imgPost: "../../assets/img/img01.jpg",
         altImgPost: "imgPost9",
+        postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
         postSubtitle2: 
@@ -254,6 +263,7 @@ const PostData = [
         category: "Startup",
         imgPost: "../../assets/img/img01.jpg",
         altImgPost: "imgPost10",
+        postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
         postSubtitle2: 
@@ -281,6 +291,7 @@ const PostData = [
         category: "Travel",
         imgPost: "../../assets/img/img01.jpg",
         altImgPost: "imgPost11",
+        postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
         postSubtitle2: 
@@ -308,6 +319,7 @@ const PostData = [
         category: "Economy",
         imgPost: "../../assets/img/img01.jpg",
         altImgPost: "imgPost12",
+        postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
         postSubtitle2: 

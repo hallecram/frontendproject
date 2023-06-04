@@ -1,21 +1,59 @@
-import './BlogAllPosts.scss';
-import AllPostsData from './AllPostsData';
-   
-const BlogAllPosts = () => {
+import { useState } from 'react';
+import PostData from "../../assets/data/PostData";
 
-    const AllPostsData =
-        {
-          id: 1,
-          src: "../../assets/img/post-img01.png",
-          description: "Slider 01",
-          category: "Travel",
-          title: "8 Figma design systems that you can download for free today",
-          author: "Floyd Miles",
-          date: "November 15, 2022",
-          caption:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, ut! Libero, perferendis aspernatur aliquam quibusdam totam sed.",
-        };
-    
+import './BlogAllPosts.scss';
+   
+const BlogAllPosts = ({posts}) => {
+
+    //useState para o renderizar novamente a lista
+    const [currentList, setCurrentList] = useState();
+    //const length = {posts}.length;
+
+    //callback functions para as setas
+    const nextPage = ()=>{
+        if(currentList === (posts.length - 5)){
+            return
+        }
+        else{
+            setCurrentList(currentList => currentList + 5)
+        }
+    };
+    const prevPage = ()=>{
+        if (currentList === 5) {
+            return
+        }
+        else{
+            setCurrentList(currentList => currentList - 5)
+        }
+    };
+
+    //se o array não for o DataLoader ou se array não tiver valores
+    if (!Array.isArray(PostData) || posts.length <= 0){
+        return null;
+    }
+
+
+    //map para o conteudo do array
+    const PostList = PostData.slice(0,5).map((postElem, index) => {
+        const {imgPost,altImgPost,category,postTitle,postCaption} = postElem;
+
+        return(
+            <div 
+                className="post-caption" 
+                key={index}
+            >
+                <div className="img-wrapper">
+                    <img src={imgPost} alt={altImgPost}/> 
+                </div>
+                <div className="txt-wrapper">
+                    <p className="cat-cap">{category}</p>
+                    <h2>{postTitle}</h2>
+                    <p>{postCaption}</p>
+                </div>
+            </div>
+        )
+    })
+  
     return (
         <div className="blog-allposts-container">
             <div className="blog-allposts-title">
@@ -23,107 +61,11 @@ const BlogAllPosts = () => {
             </div>
             <hr></hr>
             <div className="blog-allposts-box">
-                <div className="post-caption">
-                    <div className="img-wrapper">
-                        <img src={AllPostsData.src} /> 
-                    </div>
-                    <div className="txt-wrapper">
-                        <p className="cat-cap">{AllPostsData.category}</p>
-                        <h2>{AllPostsData.title}</h2>
-                        <p>{AllPostsData.caption}</p>
-                    </div>
-                </div>
-                <div className="post-caption">
-                    <div className="img-wrapper">
-                        <img src={AllPostsData.src} /> 
-                    </div>
-                    <div className="txt-wrapper">
-                        <p className="cat-cap">{AllPostsData.category}</p>
-                        <h2>{AllPostsData.title}</h2>
-                        <p>{AllPostsData.caption}</p>
-                    </div>
-                </div>
-                <div className="post-caption">
-                    <div className="img-wrapper">
-                        <img src={AllPostsData.src} /> 
-                    </div>
-                    <div className="txt-wrapper">
-                        <p className="cat-cap">{AllPostsData.category}</p>
-                        <h2>{AllPostsData.title}</h2>
-                        <p>{AllPostsData.caption}</p>
-                    </div>
-                </div>
-                <div className="post-caption">
-                    <div className="img-wrapper">
-                        <img src={AllPostsData.src} /> 
-                    </div>
-                    <div className="txt-wrapper">
-                        <p className="cat-cap">{AllPostsData.category}</p>
-                        <h2>{AllPostsData.title}</h2>
-                        <p>{AllPostsData.caption}</p>
-                    </div>
-                </div>
-                <div className="post-caption">
-                    <div className="img-wrapper">
-                        <img src={AllPostsData.src} /> 
-                    </div>
-                    <div className="txt-wrapper">
-                        <p className="cat-cap">{AllPostsData.category}</p>
-                        <h2>{AllPostsData.title}</h2>
-                        <p>{AllPostsData.caption}</p>
-                    </div>
-                </div>
-                <div className="post-caption">
-                    <div className="img-wrapper">
-                        <img src={AllPostsData.src} /> 
-                    </div>
-                    <div className="txt-wrapper">
-                        <p className="cat-cap">{AllPostsData.category}</p>
-                        <h2>{AllPostsData.title}</h2>
-                        <p>{AllPostsData.caption}</p>
-                    </div>
-                </div>
-                <div className="post-caption">
-                    <div className="img-wrapper">
-                        <img src={AllPostsData.src} /> 
-                    </div>
-                    <div className="txt-wrapper">
-                        <p className="cat-cap">{AllPostsData.category}</p>
-                        <h2>{AllPostsData.title}</h2>
-                        <p>{AllPostsData.caption}</p>
-                    </div>
-                </div>
-                <div className="post-caption">
-                    <div className="img-wrapper">
-                        <img src={AllPostsData.src} /> 
-                    </div>
-                    <div className="txt-wrapper">
-                        <p className="cat-cap">{AllPostsData.category}</p>
-                        <h2>{AllPostsData.title}</h2>
-                        <p>{AllPostsData.caption}</p>
-                    </div>
-                </div>
-                <div className="post-caption">
-                    <div className="img-wrapper">
-                        <img src={AllPostsData.src} /> 
-                    </div>
-                    <div className="txt-wrapper">
-                        <p className="cat-cap">{AllPostsData.category}</p>
-                        <h2>{AllPostsData.title}</h2>
-                        <p>{AllPostsData.caption}</p>
-                    </div>
-                </div>
-                <div className="post-caption">
-                    <div className="img-wrapper">
-                        <img src={AllPostsData.src} /> 
-                    </div>
-                    <div className="txt-wrapper">
-                        <p className="cat-cap">{AllPostsData.category}</p>
-                        <h2>{AllPostsData.title}</h2>
-                        <p>{AllPostsData.caption}</p>
-                    </div>
-                </div>
-                
+              {PostList}
+            </div>
+            <div className="blog-allposts-pages">
+                <p onClick={prevPage}>Prev</p>
+                <p onClick={nextPage}>Next</p>
             </div>
             
         </div>

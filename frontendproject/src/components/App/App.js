@@ -27,7 +27,7 @@ function App() {
                 const linkTo = `post${postId}`;
                 return(
                   <Route key={postId} path={linkTo} exact element={
-                    <BlogPost linkTo={{linkTo}} />
+                    <BlogPost linkTo={{linkTo}} posts={PostData}/>
                   } />
                 )
               })}

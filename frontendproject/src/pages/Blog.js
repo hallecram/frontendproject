@@ -4,6 +4,7 @@ import Carousel from "../components/Carousel/Carousel";
 import Join from "../components/Join/Join";
 
 import CatData from "../components/Carousel/CatData";
+import PostData from "../assets/data/PostData";
 
 const Blog = () => {
     return(
@@ -12,7 +13,7 @@ const Blog = () => {
                 <BlogFtPost />
             </section>
             <section>
-                <BlogAllPosts />
+                <BlogAllPosts posts={PostData} />
             </section>
             {/*}
             <section>
