@@ -48,7 +48,9 @@
       }
     }
     .blog-allposts-pages{
-      display: flex;
+      ul{
+        display: flex;
+      }
     }
   }
 

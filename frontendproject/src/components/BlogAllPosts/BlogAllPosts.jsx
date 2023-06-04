@@ -1,42 +1,40 @@
-import { useState } from 'react';
+import { useState } from "react";
 import PostData from "../../assets/data/PostData";
 
 import './BlogAllPosts.scss';
    
-const BlogAllPosts = ({posts}) => {
+function BlogAllPosts({posts}){
 
     //useState para o renderizar novamente a lista
-    const [currentList, setCurrentList] = useState();
-    //const length = {posts}.length;
+    //const [data, setData] = useState([]);
 
-    //callback functions para as setas
-    const nextPage = ()=>{
-        if(currentList === (posts.length - 5)){
-            return
-        }
-        else{
-            setCurrentList(currentList => currentList + 5)
-        }
-    };
-    const prevPage = ()=>{
-        if (currentList === 5) {
-            return
-        }
-        else{
-            setCurrentList(currentList => currentList - 5)
-        }
-    };
+    //useState para o fetch
+    //const [loading, setLoading] = useState(false);
 
-    //se o array não for o DataLoader ou se array não tiver valores
-    if (!Array.isArray(PostData) || posts.length <= 0){
+    //useState para a pagination
+    const [currentPage, setCurrentPage] = useState(1);
+    //useState para nr posts por página
+    const [postsPerPage, setPostsPerPage] = useState(5);
+
+    const [pageNumberLimit, setPageNumberLimit] = useState(5);
+    const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
+    const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
+
+    //se o array não for o PostData ou se array não tiver valores
+    if (!Array.isArray(posts) || posts.length <= 0){
         return null;
     }
 
+    //get current posts
+    const indexLastPost = currentPage * postsPerPage;
+    const indexFirstPost = indexLastPost - postsPerPage;
+    //const currentPosts = posts.slice(indexFirstPost, indexLastPost); --> usar quando houver fetch
+    
 
     //map para o conteudo do array
-    const PostList = PostData.slice(0,5).map((postElem, index) => {
+    const PostList = 
+        PostData.slice(indexFirstPost, indexLastPost).map((postElem, index) => {
         const {imgPost,altImgPost,category,postTitle,postCaption} = postElem;
-
         return(
             <div 
                 className="post-caption" 
@@ -51,9 +49,55 @@ const BlogAllPosts = ({posts}) => {
                     <p>{postCaption}</p>
                 </div>
             </div>
-        )
-    })
-  
+        )})
+
+    //page numbers
+    const PageNumbers = [];
+    for(let i = 1; i <= Math.ceil(posts.length / postsPerPage); i++){
+        PageNumbers.push(i);
+    }
+
+     
+    //handle click for each page
+    const handleClick = (eventArgs) => {
+        setCurrentPage(Number(eventArgs.target.id));
+    }
+
+    //change page
+    const handleNextBtn = () => {
+        setCurrentPage(currentPage + 1);
+        if(currentPage + 1 > maxPageNumberLimit){
+            setMaxPageNumberLimit(maxPageNumberLimit + pageNumberLimit);
+            setMinPageNumberLimit(minPageNumberLimit + pageNumberLimit);
+        }
+    };
+    const handlePrevBtn = () => {
+        setCurrentPage(currentPage - 1);
+        if((currentPage - 1) % pageNumberLimit === 0){
+            setMaxPageNumberLimit(maxPageNumberLimit - pageNumberLimit);
+            setMinPageNumberLimit(minPageNumberLimit - pageNumberLimit);
+        }
+    };
+
+    //pagination of page numbers
+    const Pagination = PageNumbers.map((number) => {
+        if(number < maxPageNumberLimit + 1 && number > minPageNumberLimit){
+            return(
+                <li 
+                    key={number} 
+                    id={number}
+                    onClick={handleClick}
+                    className={currentPage === number ? "active" : null}
+                >
+                    {number}
+                </li>
+            );
+        }
+        else{
+            return null;
+        }   
+    });
+ 
     return (
         <div className="blog-allposts-container">
             <div className="blog-allposts-title">
@@ -62,14 +106,19 @@ const BlogAllPosts = ({posts}) => {
             <hr></hr>
             <div className="blog-allposts-box">
               {PostList}
-            </div>
+            </div> 
             <div className="blog-allposts-pages">
-                <p onClick={prevPage}>Prev</p>
-                <p onClick={nextPage}>Next</p>
+                <ul>
+                    <li>
+                        <button onClick={handlePrevBtn}>Prev</button>
+                    </li>
+                    {Pagination}
+                    <li>
+                        <button onClick={handleNextBtn}>Next</button>
+                    </li>
+                </ul>
             </div>
-            
         </div>
-        
     );
 }
 

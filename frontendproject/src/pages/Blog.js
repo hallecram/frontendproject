@@ -15,11 +15,9 @@ const Blog = () => {
             <section>
                 <BlogAllPosts posts={PostData} />
             </section>
-            {/*}
-            <section>
+            <section className="carousel-section">
                 <Carousel categories={CatData} />
             </section>
-            */}
             <section className="join-section">
                 <Join />
             </section>
