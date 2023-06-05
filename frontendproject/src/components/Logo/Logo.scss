@@ -1,14 +1,13 @@
 @import '../../assets/sass/main.scss';
 
-//desktop
+//DESKTOP MIN 1440PX
 .logo-container{
     width: 100%;
-    padding: 0.833vw 0;
     height: auto;
     .logo-wrapper{
         display: flex;
         flex-flow: row wrap;
-        gap: 24px;
+        gap: 32px;
         justify-content: space-evenly;
         align-items: center;
         .logo-txt{
@@ -24,18 +23,45 @@
             }
         }
     }
-    
 }
 
-//mobile
+//DESKTOP > XL-DESKTOP
+@media screen and (min-width: $desktop) and (max-width: $xl-desktop){
+    .logo-container{
+        min-width: $desktop;
+        width: 100%;
+        max-width: $xl-desktop;
+        height: auto;
+    }
+}
+
+//TABLET > DESKTOP
+@media screen and (min-width: $tablet) and (max-width: $desktop){
+    .logo-container{
+        min-width: $tablet;
+        width: 100%;
+        max-width: $desktop;
+        height: auto;
+    }
+}
+
+//TABLET
+@media screen and (min-width: $mobile) and (max-width: $tablet){
+    .logo-container{
+        min-width: $mobile;
+        width: 100%;
+        max-width: $tablet;
+        padding: 0.833vw 0;
+    }
+}
+
+//MOBILE
 @media screen and (max-width: $mobile){
     .logo-container{
         min-width: $xs-mobile;
+        width: 100%;
         max-width: $mobile;
         padding: 0.833vw 0;
-        .logo-wrapper{
-            width: 100%;
-        }
     }
 }
 

@@ -1,11 +1,11 @@
 @import '../../assets/sass/main.scss';
 
-//desktop
+//DESKTOP
 .join-container{
     width: 100%;
-    padding: 8.889vw 0;
     display: flex;
     justify-content: center;
+    margin-bottom: 2.222vw;
     .join-txt-wrapper{
         width: 500px;
         display: flex;
@@ -14,22 +14,40 @@
         align-items: center;
         gap: 2.222vw;
     }
-
 }
 
-//mobile
-@media screen and (max-width: $mobile){
+//TABLET > DESKTOP
+@media screen and (min-width: $tablet) and (max-width: $desktop){
     .join-container{
-        min-width: $xs-mobile;
-        max-width: $mobile;
-        height: auto;
+        min-width: $tablet;
+        max-width: $desktop;
         .join-txt-wrapper{
             width: 100%;
         }
     }
 }
 
+//TABLET
+@media screen and (min-width: $mobile) and (max-width: $tablet){
+    .join-container{
+        min-width: $mobile;
+        max-width: $tablet;
+        .join-txt-wrapper{
+            width: 100%;
+        }
+    }
+}
 
+//MOBILE
+@media screen and (max-width: $mobile){
+    .join-container{
+        min-width: $xs-mobile;
+        max-width: $mobile;
+        .join-txt-wrapper{
+            width: 100%;
+        }
+    }
+}
 
 //BACKUP
 // .join-container{

@@ -55,9 +55,7 @@ function App() {
                 />
               )
             })}
-          </Routes>
-
-          
+          </Routes>        
       </div>
       <div id="Footer" className="footer">
         <Footer />

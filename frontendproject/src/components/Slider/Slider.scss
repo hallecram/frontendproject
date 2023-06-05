@@ -1,5 +1,7 @@
 @import '../../assets/sass/main.scss';
 
+
+//DESKTOP
 .imgslider-container{
     width: 100%;
     position: relative;
@@ -68,7 +70,6 @@
             }
         } 
     }
-  
     .prev{
         position: absolute;
         left: 3rem;
@@ -91,5 +92,4 @@
         cursor: pointer;
         user-select: none;
     }
-
 }

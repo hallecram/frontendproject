@@ -61,11 +61,20 @@ const Authors = ({authors}) => {
                 <div className="box-wrapper">
                         {AuthorList}
                 </div>
+                {/* SETAS */}
+                <div className="aut-arrows">
+                    <div className="arrows-wrapper">
+                        <div className="prev">
+                            <img src="../../assets/img/arrow.svg" className="prev-arrow" alt="prevArrow" onClick={prevCard}/>
+                        </div>
+                        <div className="next">
+                            <img src="../../assets/img/arrow.svg" className="next-arrow" alt="nextArrow" onClick={nextCard}/>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="arrows">
-                <button id="prevBtn" onClick={prevCard} className="Prev">Prev</button>
-                <button id="nextBtn" onClick={nextCard} className="Next">Next</button>
-            </div>
+
+            
         </div>  
     )
 }

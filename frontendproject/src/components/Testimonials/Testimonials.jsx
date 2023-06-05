@@ -1,6 +1,7 @@
-import './Testimonials.scss';
 import { useState } from 'react';
-import TestData from './TestData';
+import TestData from '../../assets/data/TestData';
+
+import './Testimonials.scss';
 
 function Testimonials({tests}){
 
@@ -70,9 +71,6 @@ function Testimonials({tests}){
                     </div>
                 </div>
             </div>
-            
-            
-            
         </div>
     );
 }

@@ -28,10 +28,12 @@ function Contact(){
     const validation = (values) => {
         const Error = {};
         const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+        const regexName = /^[a-zA-Z ]{3,}$/;
+
         if(!values.fullname){
             Error.fullname = "Please, enter your full name";
-        }else if(values.fullname.length < 3){
-            Error.fullname = "Full name must be more than 3 digits";
+        }else if(!regexName.test(values.fullname)){
+            Error.fullname = "Full name must be more than 3 digits and do not have numbers or special characters";
         }
         if(!values.email){
             Error.email = "Please, enter your email";
@@ -128,3 +130,9 @@ function Contact(){
 
 export default Contact
 
+//BACKUP
+// if(!values.fullname){
+//     Error.fullname = "Please, enter your full name";
+// }else if(values.fullname.length < 3){
+//     Error.fullname = "Full name must be more than 3 digits";
+// }

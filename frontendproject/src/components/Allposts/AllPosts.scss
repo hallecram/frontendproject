@@ -1,6 +1,6 @@
 @import "../../assets/sass/main.scss";
 
-//desktop
+//DESKTOP MIN 1440PX
 .allposts-container {
   width: 40%;
   height: 100%;
@@ -8,16 +8,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2.222vmax;
+    margin-bottom: 2.222vw;
   }
   .allposts-box {
     height: 700px;
     overflow: hidden;
     .post-caption {
-      //width: 100%;
       height: 150px;
       background-color: $cat-bg;
-      padding: 2.222vmax 6.944vmax 1.736vmax 2.222vmax;
+      padding: 1.111vw;
+      margin-bottom: 2.222vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -39,14 +39,26 @@
   }
 }
 
-
-//mobile
-@media screen and (max-width: $mobile){
+//TABLET > DESKTOP
+@media screen and (min-width: $tablet) and (max-width: $desktop){
   .allposts-container {
-    min-width: $xs-mobile;
+    width: 45%;
+    .allposts-box {
+      height: 600px;
+      overflow: hidden;
+      .post-caption {
+        height: 170px;
+      }
+    }
+  }
+}
+
+//TABLET
+@media screen and (min-width: $mobile) and (max-width: $tablet){
+  .allposts-container {
+    min-width: $mobile;
     width: 100%;
-    max-width: $mobile;
-    height: auto;
+    max-width: $tablet;
     .allposts-box {
       .post-caption {
         height: 150px;
@@ -55,8 +67,19 @@
   }
 }
 
+//MOBILE
+@media screen and (max-width: $mobile){
+  .allposts-container {
+    min-width: $xs-mobile;
+    max-width: $mobile;
+    .allposts-box {
+      .post-caption {
+        height: 150px;
+      }
+    }
+  }
+}
 
-//6.944vw
 
 //backup
 // .allposts-container {

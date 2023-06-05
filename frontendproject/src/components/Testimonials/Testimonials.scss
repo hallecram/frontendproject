@@ -1,6 +1,6 @@
 @import '../../assets/sass/main.scss';
 
-//desktop
+//DESKTOP MIN 1440PX
 .test-container{
     width: 100%;
     height: 100%;
@@ -54,10 +54,8 @@
             }
         }
         .test-hr{
-            //height: 100%;
             padding: 0 5.556vw;
             hr{
-                //width: 100%;
                 height: calc(450px - 11.111vw);
                 border: 1 solid $text-medium;
                 opacity: 0.4;
@@ -73,7 +71,7 @@
                 height: 100%;
                 .test-output{
                     display: flex;
-                    flex-direction: column;
+                    flex-flow: column nowrap;
                     justify-content: space-between;
                     .author-wrapper{
                         height: auto;
@@ -106,12 +104,55 @@
     }
 }
 
+//TABLET > DESKTOP
+@media screen and (min-width: $tablet) and (max-width: $desktop){
+    .test-container{
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 8;
+        .test-wrapper{
+            .test-txt{
+                width: 45%;
+            }
+            .output-container{
+                width: 55%;
+            }
+        }
+    }
+}
+
+//TABLET
+@media screen and (min-width: $mobile) and (max-width: $tablet){
+    .test-container{
+        min-width: $mobile;
+        max-width: $tablet;
+        display: flex;
+        .test-wrapper{
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            .test-txt{
+                width: 100%;
+                margin-bottom: 3.333vw;
+            }
+            .test-hr{
+                display: none
+            }
+            .output-container{
+                width: 100%;
+            }
+        }
+    }
+}
+
 //MOBILE
 @media screen and (max-width: $mobile){
     .test-container{
         min-width: $xs-mobile;
+        width: 100%;
         max-width: $mobile;
         height: 700px;
+        background-color: $test-bg;
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-between;
@@ -119,6 +160,25 @@
         .test-arrows{
             position: unset;
             z-index: 9;
+            bottom: 0;
+            right: 0;
+            .arrows-wrapper{
+                padding: 5.556vw;
+                display: flex;
+                .prev-arrow{
+                    transform: rotate(180deg);
+                    cursor: pointer;
+                }
+                .prev-arrow:hover{
+                    transform: rotate(180deg) scale(150%);
+                }
+                .next-arrow{
+                    cursor: pointer;
+                }
+                .next-arrow:hover{
+                    transform: scale(150%);
+                }
+            }
         }
         .test-wrapper{
             height: 100%;
@@ -134,15 +194,7 @@
                 white-space: normal;
             }
             .test-hr{
-                //height: 100%;
-                padding: 13.889vw 0;
-                hr{
-                    width: 100%;
-                    height: 0;
-                    border: 1 solid $text-medium;
-                    opacity: 0.4;
-                    transform: none;
-                }
+                display: none;
             }
             .output-container{
                 width: 100%;
@@ -152,13 +204,40 @@
                 div{
                     height: 100%;
                     .test-output{
-                        gap: 24px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .author-wrapper{
+                            height: auto;
+                            display: flex;
+                            .img-wrapper{
+                                width: 48px;
+                                height: 48px;
+                                margin-right: 1.111vw; 
+                                .img-test{
+                                    object-fit: contain;
+                                }
+                            }
+                            .author-test{
+                                p{
+                                    margin: 0;
+                                }
+                            }
                         }
                     }
                 }
             }
         }
+        .current-test {
+            transition-duration: 0.5s ease;
+            opacity: 0;
+        }
+        .current-test.active{
+            opacity: 1;
+            transition-duration: 0.5s;
+        }
     }
+}
 
 
 

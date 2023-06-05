@@ -1,6 +1,6 @@
 @import "../../assets/sass/main.scss";
 
-//desktop
+//DESKTOP MIN 1440PX
 .sp-container {
   width: 100%;
   position: relative;
@@ -29,7 +29,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      //padding: 80px;
       .sp-cap {
         @include cap;
         margin-bottom: 1.667vw;
@@ -46,8 +45,43 @@
   }
 }
 
+//TABLET > DESKTOP
+@media screen and (min-width: $tablet) and (max-width: $desktop){
+  .sp-container {
+    min-width: $tablet;
+    max-width: $desktop;
+    position: relative;
+    .sp-txt {
+      width: 75%;
+      background-color: $cat-bg;
+    }
+  }
+}
 
-//mobile
+
+//TABLET
+@media screen and (min-width: $mobile) and (max-width: $tablet){
+  .sp-container {
+    min-width: $mobile;
+    max-width: $tablet;
+    display: flex;
+    flex-flow: column wrap;
+    .sp-img {
+      z-index: 0;
+    }
+    .sp-txt {
+      width: 100%;
+      padding: 5.556vw 0;
+      position: unset;
+      z-index: 0;
+      .btn-wrapper{
+        width: 100%;
+      }
+    }
+  }
+}
+
+//MOBILE
 @media screen and (max-width: $mobile){
   .sp-container {
     min-width: $xs-mobile;
@@ -62,6 +96,15 @@
       padding: 5.556vw 0;
       position: unset;
       z-index: 0;
+      .txt-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+      }
+      .btn-wrapper{
+        width: 100%;
+      }
     }
   }
 }

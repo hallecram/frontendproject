@@ -59,42 +59,18 @@ function Carousel({categories}){
             <div className="cat-wrapper">
                 <div className="box-wrapper">
                     {CatList}
-                    {/*
-                    <div className="carousel-box">
-                        <div className="txt-wrapper">
-                            <img></img>
-                            <h3></h3>
-                            <p></p>
-                        </div>                    
-                    </div>
-                    <div className="carousel-box">
-                        <div className="txt-wrapper">
-                            <img></img>
-                            <h3></h3>
-                            <p></p>
-                        </div>  
-                    </div>
-                    <div className="carousel-box">
-                        <div className="txt-wrapper">
-                            <img></img>
-                            <h3></h3>
-                            <p></p>
-                        </div>  
-                    </div>
-                    <div className="carousel-box">
-                        <div className="txt-wrapper">
-                            <img></img>
-                            <h3></h3>
-                            <p></p>
-                        </div>  
-                    </div>
-                    */}
-
                 </div>
-            </div>
-            <div className="arrows">
-                <button id="prevBtn" onClick={prevCard} className="Prev">Prev</button>
-                <button id="nextBtn" onClick={nextCard} className="Next">Next</button>
+                {/* SETAS */}
+                <div className="cat-arrows">
+                    <div className="arrows-wrapper">
+                        <div className="prev">
+                            <img src="../../assets/img/arrow.svg" className="prev-arrow" alt="prevArrow" onClick={prevCard}/>
+                        </div>
+                        <div className="next">
+                            <img src="../../assets/img/arrow.svg" className="next-arrow" alt="nextArrow" onClick={nextCard}/>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
 @import "../../assets/sass/main.scss";
 
-//display
+//DESKTOP
 .ftpost-container {
   width: 60%;
   h2{
@@ -29,7 +29,44 @@
   }
 }
 
-//mobile
+//TABLET > DESKTOP
+@media screen and (min-width: $tablet) and (max-width: $desktop){
+  .ftpost-container {
+    width: 60%;
+    h2{
+      margin-bottom: 2.222vw;
+    }
+    .ftpost-box {
+      border: 1px solid $border;
+      padding: 2.222vw;
+    }
+  }
+}
+
+//TABLET
+@media screen and (min-width: $mobile) and (max-width: $tablet){
+  .ftpost-container {
+    min-width: $mobile;
+    width: 100%;
+    max-width: $tablet;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    .ftpost-box {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 12px;
+      .ftpost-img {
+        width: 100%;
+      }
+      .btn-wrapper{
+        width: auto;
+      }
+    }
+  }
+}
+
+//MOBILE
 @media screen and (max-width: $mobile){
   .ftpost-container {
     min-width: $xs-mobile;

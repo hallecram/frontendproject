@@ -1,30 +1,29 @@
 @import "../../assets/sass/main.scss";
 
-//desktop
+//DESKTOP MIN 1440PX
 .tabs-container {
     width: 100%;
     height: 100%;
     .tabs {
-      //width: 100%;
-      height: 25px;
-      display: flex;
-      cursor: pointer;
-        .tab1 {
-            width: 15%;
-            background-color: white;
-        }
-        .tab2 {
-            width: 65%;
-            background-color: $btn-bg;
-        }
-        .tab3 {
-            width: 20%;
-            background-color: $span;
-        }
+        height: 25px;
+        display: flex;
+        cursor: pointer;
+            .tab1 {
+                width: 15%;
+                background-color: white;
+            }
+            .tab2 {
+                width: 65%;
+                background-color: $btn-bg;
+            }
+            .tab3 {
+                width: 20%;
+                background-color: $span;
+            }
     }
     .tabs-output {
         width: auto;
-        min-height: calc(100% - 11.111vw);
+        min-height: 350px;
         background-color: $tab-output-bg;
         padding: 5.556vw;
         .tab-wrapper{
@@ -45,21 +44,51 @@
                     @include btn-font
                 }
             }
-            }
-            
+        }
     }
 }
 
+//TABLET > DESKTOP
+@media screen and (min-width: $tablet) and (max-width: $desktop){
+    .tabs-container {
+        min-width: $tablet;
+        max-width: $desktop;
+        .tabs-output {
+            min-height: 435px;
+        }
+    }
+}
 
+//TABLET
+@media screen and (min-width: $mobile) and (max-width: $tablet){
+    .tabs-container {
+        min-width: $mobile;
+        max-width: $tablet;
+        .tabs-output {
+            min-height: 560px;
+            .tab-wrapper{
+                flex-flow: column wrap;
+                :first-child{
+                    margin-bottom: 5.556vw;
+                }
+            }
+        }
+    }
+}
+
+//MOBILE
 @media screen and (max-width: $mobile){
     .tabs-container {
         min-width: $xs-mobile;
         max-width: $mobile;
-    }
-    .tabs-output {
-        .tab-wrapper{
-            display: flex;
-            flex-flow: column nowrap;
+        .tabs-output {
+            min-height: 700px;
+            .tab-wrapper{
+                flex-flow: column wrap;
+                :first-child{
+                    margin-bottom: 5.556vw;
+                }
+            }
         }
     }
 }

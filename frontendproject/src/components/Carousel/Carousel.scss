@@ -1,39 +1,62 @@
 @import "../../assets/sass/main.scss";
 
+//DESKTOP MIN 1440PX
 .carousel-container {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     .carousel-title {
         display: flex;
         justify-content: center;
-        margin-bottom: 32px;
+        margin-bottom: 2.222vw;
     }
     .cat-wrapper{
         display: flex;
-        height: auto;
-        .box-wrapper{
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 8;
+        .cat-arrows{
             width: 100%;
-            height: calc(100% - 80px);
+            position: absolute;
+            z-index: 9;
+            .arrows-wrapper{
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                .prev-arrow{
+                    transform: rotate(180deg);
+                    cursor: pointer;
+                }
+                .prev-arrow:hover{
+                    transform: rotate(180deg) scale(150%);
+                }
+                .next-arrow{
+                    cursor: pointer;
+                }
+                .next-arrow:hover{
+                    transform: scale(150%);
+                }
+            }
+        }
+        .box-wrapper{
+            width: 95%;
             background-color: #fff;
             display: flex;
-            flex-direction: row;
-            gap: 32px;
+            flex-flow: row nowrap;
+            justify-content: space-between;
             .carousel-box {
-                width: 25%;
-                height: 100%;
+                width: 16%;
                 border: solid 1px $border;
-                //opacity: 0.3;
                 display: flex;
+                flex-flow: column wrap;
+                justify-content: space-between;
                 align-items: center;
-                flex-direction: column;
-                padding: 32px;    
+                padding: 2.222vw;    
                 .txt-wrapper {
-                    width: 100%;
-                    height: 100%;
                     display: flex;
-                    flex-direction: column;
+                    flex-flow: column wrap;
                     justify-content: center;
                     align-items: flex-start;
                     .img-wrapper{
@@ -56,12 +79,178 @@
                 }
             &.carousel-box:hover {
                 background-color: $cat-bg-hover;
-                border: none;
+                border: solid 1px $cat-bg-hover;
+                cursor: pointer;
             }
             }
             .hidden{
                 display: none;
             }
         }   
+    }
+}
+
+//TABLET > DESKTOP
+@media screen and (min-width: $tablet) and (max-width: $desktop){
+    .carousel-container {
+        min-width: $tablet;
+        max-width: $desktop;
+        .cat-wrapper{
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            position: unset;
+            .cat-arrows{
+                position: unset;
+                margin-top: 2.222vw;
+                .arrows-wrapper{
+                    justify-content: center;
+                }
+            }
+            .box-wrapper{
+                width: 100%;
+                .carousel-box {
+                    width: 16%;
+                }
+            }   
+        }
+    }
+}
+
+//TABLET
+@media screen and (min-width: $mobile) and (max-width: $tablet){
+    .carousel-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        .carousel-title {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+        .cat-wrapper{
+            display: flex;
+            height: auto;
+            .box-wrapper{
+                width: 100%;
+                height: calc(100% - 80px);
+                background-color: #fff;
+                display: flex;
+                flex-direction: row;
+                gap: 32px;
+                .carousel-box {
+                    width: 25%;
+                    height: 100%;
+                    border: solid 1px $border;
+                    //opacity: 0.3;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 32px;    
+                    .txt-wrapper {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        .img-wrapper{
+                            width: 48px;
+                            height: 48px;
+                            background-color: $test-bg;
+                            border-radius: 5px;
+                            margin-bottom: 16px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        h3{
+                            margin-bottom: 4px;
+                        }
+                        p{
+                            @include body-02;
+                            color: $text-medium;
+                        }
+                    }
+                &.carousel-box:hover {
+                    background-color: $cat-bg-hover;
+                    border: none;
+                }
+                }
+                .hidden{
+                    display: none;
+                }
+            }   
+        }
+    }
+}
+
+//MOBILE
+@media screen and (max-width: $mobile){
+    .carousel-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        .carousel-title {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+        .cat-wrapper{
+            display: flex;
+            height: auto;
+            .box-wrapper{
+                width: 100%;
+                height: calc(100% - 80px);
+                background-color: #fff;
+                display: flex;
+                flex-direction: row;
+                gap: 32px;
+                .carousel-box {
+                    width: 25%;
+                    height: 100%;
+                    border: solid 1px $border;
+                    //opacity: 0.3;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 32px;    
+                    .txt-wrapper {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        .img-wrapper{
+                            width: 48px;
+                            height: 48px;
+                            background-color: $test-bg;
+                            border-radius: 5px;
+                            margin-bottom: 16px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        h3{
+                            margin-bottom: 4px;
+                        }
+                        p{
+                            @include body-02;
+                            color: $text-medium;
+                        }
+                    }
+                &.carousel-box:hover {
+                    background-color: $cat-bg-hover;
+                    border: none;
+                }
+                }
+                .hidden{
+                    display: none;
+                }
+            }   
+        }
     }
 }

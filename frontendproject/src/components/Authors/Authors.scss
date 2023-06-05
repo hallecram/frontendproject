@@ -1,59 +1,238 @@
 @import "../../assets/sass/main.scss";
 
+
+//DESKTOP MIN 1440PX
 .aut-container {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     .aut-title {
         display: flex;
         justify-content: center;
-        margin-bottom: 32px;
+        margin-bottom: 2.222vw;
     }
     .aut-wrapper{
         display: flex;
-        height: auto;
-        .box-wrapper{
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 8;
+        .aut-arrows{
             width: 100%;
-            height: calc(100% - 80px);
+            position: absolute;
+            z-index: 9;
+            .arrows-wrapper{
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                .prev-arrow{
+                    transform: rotate(180deg);
+                    cursor: pointer;
+                }
+                .prev-arrow:hover{
+                    transform: rotate(180deg) scale(150%);
+                }
+                .next-arrow{
+                    cursor: pointer;
+                }
+                .next-arrow:hover{
+                    transform: scale(150%);
+                }
+            }
+        }
+        .box-wrapper{
+            width: 95%;
             background-color: #fff;
             display: flex;
-            flex-direction: row;
-            gap: 20px;
+            flex-flow: row nowrap;
+            justify-content: space-between;
             .aut-box {
-                width: 25%;
-                height: 100%;
+                width: 16%;
                 background-color: $author-bg;
                 display: flex;
-                flex-direction: column;
+                flex-flow: column nowrap;
+                justify-content: space-between;
                 align-items: center;
-                padding: 40px;
+                padding: 2.778vw;
                 .txt-wrapper {
-                    width: 100%;
-                    height: 100%;
                     display: flex;
-                    flex-direction: column;
+                    flex-flow: column wrap;
                     justify-content: center;
                     align-items: center;
-                    margin-bottom: 20px;
+                    margin-bottom: 1.389vw;
                     img{
                         width: 128px;
                         height: 128px;
                         object-fit: contain;
-                        margin-bottom: 20px;
+                        margin-bottom: 1.389vw;
+                    }
+                    h3{
+                        text-align: center;
                     }
                     p{
                         @include body-02;
                         color: $text-medium;
+                        text-align: center;
                     }
                 }
             }
             .aut-box:hover {
                 background-color: $author-bg-hover;
+                cursor: pointer;
             }
             .hidden{
                 display: none;
             }
         }
     }
-}   
+}
+
+//TABLET > DESKTOP
+@media screen and (min-width: $tablet) and (max-width: $desktop){
+    .aut-container {
+        min-width: $tablet;
+        max-width: $desktop;
+        .aut-wrapper{
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            position: unset;
+            .aut-arrows{
+                position: unset;
+                margin-top: 2.222vw;
+                .arrows-wrapper{
+                    justify-content: center;
+                }
+            }
+            .box-wrapper{
+                width: 100%;
+                .aut-box {
+                    width: 18%;
+                }
+            }
+        }
+    }
+}
+
+//TABLET
+@media screen and (min-width: $mobile) and (max-width: $tablet){
+    .aut-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        .aut-title {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+        .aut-wrapper{
+            display: flex;
+            height: auto;
+            .box-wrapper{
+                width: 100%;
+                height: calc(100% - 80px);
+                background-color: #fff;
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                .aut-box {
+                    width: 25%;
+                    height: 100%;
+                    background-color: $author-bg;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 40px;
+                    .txt-wrapper {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        img{
+                            width: 128px;
+                            height: 128px;
+                            object-fit: contain;
+                            margin-bottom: 20px;
+                        }
+                        p{
+                            @include body-02;
+                            color: $text-medium;
+                        }
+                    }
+                }
+                .aut-box:hover {
+                    background-color: $author-bg-hover;
+                }
+                .hidden{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+//MOBILE
+@media screen and (max-width: $mobile){
+    .aut-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        .aut-title {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 32px;
+        }
+        .aut-wrapper{
+            display: flex;
+            height: auto;
+            .box-wrapper{
+                width: 100%;
+                height: calc(100% - 80px);
+                background-color: #fff;
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                .aut-box {
+                    width: 25%;
+                    height: 100%;
+                    background-color: $author-bg;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 40px;
+                    .txt-wrapper {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        img{
+                            width: 128px;
+                            height: 128px;
+                            object-fit: contain;
+                            margin-bottom: 20px;
+                        }
+                        p{
+                            @include body-02;
+                            color: $text-medium;
+                        }
+                    }
+                }
+                .aut-box:hover {
+                    background-color: $author-bg-hover;
+                }
+                .hidden{
+                    display: none;
+                }
+            }
+        }
+    }
+}
