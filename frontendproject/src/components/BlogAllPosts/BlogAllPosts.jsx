@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import PostData from "../../assets/data/PostData";
 
 import './BlogAllPosts.scss';
@@ -33,21 +34,22 @@ function BlogAllPosts({posts}){
 
     //map para o conteudo do array
     const PostList = 
-        PostData.slice(indexFirstPost, indexLastPost).map((postElem, index) => {
-        const {imgPost,altImgPost,category,postTitle,postCaption} = postElem;
+        PostData.slice(indexFirstPost, indexLastPost).map((postElem) => {
+        const {postId,imgPost,altImgPost,category,postTitle,postCaption} = postElem;
         return(
-            <div 
-                className="post-caption" 
-                key={index}
-            >
-                <div className="img-wrapper">
-                    <img src={imgPost} alt={altImgPost}/> 
-                </div>
-                <div className="txt-wrapper">
-                    <p className="cat-cap">{category}</p>
-                    <h2>{postTitle}</h2>
-                    <p>{postCaption}</p>
-                </div>
+            <div key={postId}>
+                <Link to={`/blog/${postId}`}>
+                    <div className="post-caption">
+                        <div className="img-wrapper">
+                            <img src={imgPost} alt={altImgPost}/> 
+                        </div>
+                        <div className="txt-wrapper">
+                            <p className="cat-cap">{category}</p>
+                            <h2>{postTitle}</h2>
+                            <p>{postCaption}</p>
+                        </div>
+                    </div>
+                </Link>
             </div>
         )})
 
