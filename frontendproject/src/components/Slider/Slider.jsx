@@ -59,15 +59,6 @@ const Slider = ({slides})=>{
                         </div>
                     );
                 })}
-                {/* <div>
-                    <div className="txt-slider">
-                        <h6>POSTED ON <span>STARTUP</span></h6>
-                        <h2 className="display-txt">Step-by-step guide to choosing great font pairs</h2>
-                        <p>By <span>James West</span> | May 23, 2022</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum necessitatibus ratione asperiores debitis molestias, obcaecati fugit beatae inventore ab eum culpa vero sapiente id, sint adipisci veritatis maxime reiciendis iste?</p>
-                        <Btn value="Read more &gt;"></Btn>
-                    </div>
-                </div> */}
             </div>     
         </div>
     );

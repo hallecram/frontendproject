@@ -1,10 +1,10 @@
 @import '../../assets/sass/main.scss';
 
-//desktop
+//DESKTOP MIN 1440PX
 .footer-container{
     @include body-01;
     width: calc(100% - 11.112vw);
-    height: 560px;
+    height: auto;
     background-color: $footer-bg;
     color: $text-light;
     display: flex;
@@ -59,7 +59,6 @@
             }
         }
         .subs-form{
-            //width: 50%;
             display: flex;
             align-items: center;
             gap: 24px;
@@ -75,10 +74,11 @@
     }
 }
 
-
-@media screen and (max-width: $mobile){
+//TABLET > DESKTOP
+@media screen and (min-width: $tablet) and (max-width: $desktop){
     .footer-container{
-        height: auto;
+        min-width: $tablet;
+        max-width: $desktop;
         .footer{
             flex-flow: column wrap;
             align-items: center;
@@ -96,16 +96,93 @@
         }
         .subs-box{
             height: auto;
-            flex-flow: column nowrap;
+            flex-flow: column wrap;
             .subs-txt{
                 width: 100%;
                 h2{
                     text-align: center;
+                    margin-right: 0;
                     margin-bottom: 3.889vw;
                 }
             }
             .subs-form{
-                flex-flow: column nowrap;
+                flex-flow: column wrap;
+            }
+        }
+    }
+}
+
+//TABLET
+@media screen and (min-width: $mobile) and (max-width: $tablet){
+    .footer-container{
+        min-width: $mobile;
+        max-width: $tablet;
+        .footer{
+            flex-flow: column wrap;
+            align-items: center;
+            gap: 24px;
+            :first-child{
+                text-align: center;
+            }
+            .logo{
+                justify-content: center;
+                margin-bottom: 3.889vw;
+            }
+            .nav{
+                display: none;
+            }
+        }
+        .subs-box{
+            height: auto;
+            flex-flow: column wrap;
+            .subs-txt{
+                width: 100%;
+                h2{
+                    text-align: center;
+                    margin-right: 0;
+                    margin-bottom: 3.889vw;
+                }
+            }
+            .subs-form{
+                flex-flow: column wrap;
+            }
+        }
+    }
+}
+
+//MOBILE
+@media screen and (max-width: $mobile){
+    .footer-container{
+        min-width: $xs-mobile;
+        max-width: $mobile;
+        .footer{
+            flex-flow: column wrap;
+            align-items: center;
+            gap: 24px;
+            :first-child{
+                text-align: center;
+            }
+            .logo{
+                justify-content: center;
+                margin-bottom: 3.889vw;
+            }
+            .nav{
+                display: none;
+            }
+        }
+        .subs-box{
+            height: auto;
+            flex-flow: column wrap;
+            .subs-txt{
+                width: 100%;
+                h2{
+                    text-align: center;
+                    margin-right: 0;
+                    margin-bottom: 3.889vw;
+                }
+            }
+            .subs-form{
+                flex-flow: column wrap;
             }
         }
     }

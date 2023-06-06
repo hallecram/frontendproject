@@ -48,8 +48,26 @@
       }
     }
     .blog-allposts-pages{
-      ul{
+      .arrows-wrapper{
         display: flex;
+        justify-content: center;
+        gap: 32px;
+        margin-top: 2.222vmax;
+        .prev-arrow{
+          color: $border;
+          cursor: pointer;
+        }
+        .prev-arrow:hover{
+          color: #000;
+          transform: scale(125%);
+        }
+        .next-arrow{
+          color: #000;
+          cursor: pointer;
+        }
+        .next-arrow:hover{
+          transform: scale(125%);
+        }
       }
     }
   }

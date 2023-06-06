@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './BlogFtPost.scss';
 import Btn from '../Btn/Btn';
    
@@ -23,7 +24,9 @@ const BlogFtPost = () => {
                     <p>{ftPostData.caption}</p>
                 </div>
                 <div className="btn-wrapper">
-                    <Btn value="Read more &gt;" color="btn" />
+                    <Link to="/blog/6">
+                        <Btn value="Read more &gt;" color="btn" />
+                    </Link>
                 </div>
             </div>
             <div className="img-wrapper">

@@ -82,23 +82,23 @@ function BlogAllPosts({posts}){
     };
 
     //pagination of page numbers
-    const Pagination = PageNumbers.map((number) => {
-        if(number < maxPageNumberLimit + 1 && number > minPageNumberLimit){
-            return(
-                <li 
-                    key={number} 
-                    id={number}
-                    onClick={handleClick}
-                    className={currentPage === number ? "active" : null}
-                >
-                    {number}
-                </li>
-            );
-        }
-        else{
-            return null;
-        }   
-    });
+    // const Pagination = PageNumbers.map((number) => {
+    //     if(number < maxPageNumberLimit + 1 && number > minPageNumberLimit){
+    //         return(
+    //             <li 
+    //                 key={number} 
+    //                 id={number}
+    //                 onClick={handleClick}
+    //                 className={currentPage === number ? "active" : null}
+    //             >
+    //                 {number}
+    //             </li>
+    //         );
+    //     }
+    //     else{
+    //         return null;
+    //     }   
+    // });
  
     return (
         <div className="blog-allposts-container">
@@ -110,15 +110,15 @@ function BlogAllPosts({posts}){
               {PostList}
             </div> 
             <div className="blog-allposts-pages">
-                <ul>
-                    <li>
-                        <button onClick={handlePrevBtn}>Prev</button>
-                    </li>
-                    {Pagination}
-                    <li>
-                        <button onClick={handleNextBtn}>Next</button>
-                    </li>
-                </ul>
+                <div className="arrows-wrapper">
+                    <h5 className="prev-arrow" onClick={handlePrevBtn}>
+                        &lt; Prev
+                    </h5>
+                    {/* {Pagination} */}
+                    <h5 className="next-arrow" onClick={handleNextBtn}>
+                        Next &gt;
+                    </h5>
+                </div>
             </div>
         </div>
     );

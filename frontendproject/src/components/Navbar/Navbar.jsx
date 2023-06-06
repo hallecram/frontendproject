@@ -27,7 +27,7 @@ function Navbar(){
                         <Link to="/blog" className="text-link">Blog</Link>
                     </li>
                     <li>
-                        <Link to="/aboutus" className="text-link">About Us</Link>
+                        <Link to="/about" className="text-link">About Us</Link>
                     </li>
                     <li>
                         <Link to="/contact" className="text-link">Contact Us</Link>
@@ -51,7 +51,7 @@ function Navbar(){
                         <Link to="/blog" className="text-link">Blog</Link>
                     </li>
                     <li>
-                        <Link to="/aboutus" className="text-link">About Us</Link>
+                        <Link to="/about" className="text-link">About Us</Link>
                     </li>
                     <li>
                         <Link to="/contact" className="text-link">Contact Us</Link>

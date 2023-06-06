@@ -1,7 +1,6 @@
 import './Post.scss'
 
 const Post = (props) => {
-
     return (
         <div>
             <div className="post-container">

@@ -11,7 +11,6 @@
 }
 .master-wrapper{
     width: 100%;
-    //max-width: 1440px;
     position: relative;
     margin: 0 auto;
     .posts-section{
@@ -26,6 +25,9 @@
     .carousel-section{
         padding: 2.222vw 5.556vw;
     }
+    .mobile-carousel-section{
+        display: none;
+    }
     .sp-section{
         padding: 2.222vw 5.556vw;
     }
@@ -33,7 +35,7 @@
         padding: 2.222vw 5.556vw;
     }
     .mobile-authors-section{
-        padding: 2.222vw 5.556vw;
+        display: none;
     }
     .logo-section{
         padding: 2.222vw 5.556vw;
@@ -88,6 +90,21 @@
             display: flex;
             flex-flow: column nowrap;
         }
+        .carousel-section{
+            display: none;
+        }
+        .mobile-carousel-section{
+            display: flex;
+            padding: 2.222vw 5.556vw;
+        }
+        .authors-section{
+            display: none;
+        }
+        .mobile-authors-section{
+            display: flex;
+            padding: 2.222vw 5.556vw;
+        }
+
     }
 }
 
@@ -101,6 +118,20 @@
         .posts-section{
             display: flex;
             flex-flow: column nowrap;
+        }
+        .carousel-section{
+            display: none;
+        }
+        .mobile-carousel-section{
+            display: flex;
+            padding: 2.222vw 5.556vw;
+        }
+        .authors-section{
+            display: none;
+        }
+        .mobile-authors-section{
+            display: flex;
+            padding: 2.222vw 5.556vw;
         }
     }
 }

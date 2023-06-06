@@ -76,11 +76,9 @@ function Contact(){
                     <div classNme="form-success">
                         <p>Thanks for your contact! Your message have been sent successfully!</p>
                     </div>
-                ):(
-                 <pre>{JSON.stringify(formValue, undefined, 2)}</pre>
-                )}
+                ): null}
                 <form onSubmit={handleSubmit}>
-                    <p>{formError.fullname}</p>
+                    <p className="form-error">{formError.fullname}</p>
                     <input 
                         className="input" 
                         type="text" 
@@ -89,7 +87,7 @@ function Contact(){
                         value={formValue.fullname} 
                         onChange={handleChange}
                     />
-                    <p>{formError.email}</p>
+                    <p className="form-error">{formError.email}</p>
                     <input 
                         className="input"
                         type="mail" 
@@ -98,7 +96,7 @@ function Contact(){
                         value={formValue.email} 
                         onChange={handleChange}
                     />
-                    <p>{formError.subject}</p>
+                    <p className="form-error">{formError.subject}</p>
                     <select 
                         className="select"
                         name="subject" 
@@ -111,7 +109,7 @@ function Contact(){
                         <option value="value2">Lorem, ipsum.</option>
                         <option value="value3">Lorem ipsum dolor sit.</option>
                     </select>
-                    <p>{formError.message}</p>
+                    <p className="form-error">{formError.message}</p>
                     <textarea 
                         name="message" 
                         className="input" 

@@ -2,22 +2,22 @@
 
 //TABLET
 @media screen and (min-width: $mobile) and (max-width: $tablet){
-    .aut-container {
+    .carousel-container {
         min-width: $mobile;
         max-width: $tablet;
         height: auto;
         display: flex;
         flex-flow: column wrap;
-        .aut-title {
+        .carousel-title {
             display: flex;
             justify-content: center;
             margin-bottom: 2.222vw;
         }
-        .aut-wrapper{
+        .cat-wrapper{
             display: flex;
             position: unset;
             flex-flow: column nowrap;
-            .aut-arrows{
+            .cat-arrows{
                 margin-top: 2.222vw;
                 position: unset;
                 .arrows-wrapper{
@@ -46,67 +46,70 @@
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-between;
-                .aut-box {
+                .carousel-box {
                     width: 45%;
-                    height: 250px;
-                    background-color: $author-bg;
+                    height: auto;
+                    border: solid 1px $border;
                     display: flex;
                     flex-flow: column nowrap;
                     justify-content: space-between;
                     align-items: center;
-                    padding: 2.778vw;
+                    padding: 2.222vw;    
                     .txt-wrapper {
                         display: flex;
                         flex-flow: column nowrap;
                         justify-content: center;
-                        align-items: center;
-                        margin-bottom: 1.389vw;
-                        img{
-                            width: 128px;
-                            height: 128px;
-                            object-fit: contain;
-                            margin-bottom: 1.389vw;
+                        align-items: flex-start;
+                        .img-wrapper{
+                            width: 48px;
+                            height: 48px;
+                            background-color: $test-bg;
+                            border-radius: 5px;
+                            margin-bottom: 16px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
                         }
                         h3{
-                            text-align: center;
+                            margin-bottom: 4px;
                         }
                         p{
                             @include body-02;
                             color: $text-medium;
-                            text-align: center;
                         }
                     }
-                }
-                .aut-box:hover {
-                    background-color: $author-bg-hover;
+                &.carousel-box:hover {
+                    background-color: $cat-bg-hover;
+                    border: solid 1px $cat-bg-hover;
                     cursor: pointer;
+                }
                 }
                 .hidden{
                     display: none;
                 }
-            }
+            }   
         }
     }
 }
 
 //MOBILE
 @media screen and (max-width: $mobile){
-    .aut-container {
+    .carousel-container {
         min-width: $xs-mobile;
         max-width: $mobile;
         height: auto;
         display: flex;
         flex-flow: column wrap;
-        .aut-title {
+        .carousel-title {
             display: flex;
             justify-content: center;
             margin-bottom: 2.222vw;
         }
-        .aut-wrapper{
+        .cat-wrapper{
             display: flex;
             position: unset;
             flex-flow: column nowrap;
-            .aut-arrows{
+            .cat-arrows{
                 margin-top: 2.222vw;
                 position: unset;
                 .arrows-wrapper{
@@ -135,45 +138,48 @@
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-between;
-                .aut-box {
+                .carousel-box {
                     width: 40%;
-                    height: 250px;
-                    background-color: $author-bg;
+                    height: 200px;
+                    border: solid 1px $border;
                     display: flex;
                     flex-flow: column nowrap;
                     justify-content: space-between;
                     align-items: center;
-                    padding: 2.778vw;
+                    padding: 2.222vw;    
                     .txt-wrapper {
                         display: flex;
                         flex-flow: column nowrap;
                         justify-content: center;
-                        align-items: center;
-                        margin-bottom: 1.389vw;
-                        img{
-                            width: 128px;
-                            height: 128px;
-                            object-fit: contain;
-                            margin-bottom: 1.389vw;
+                        align-items: flex-start;
+                        .img-wrapper{
+                            width: 48px;
+                            height: 48px;
+                            background-color: $test-bg;
+                            border-radius: 5px;
+                            margin-bottom: 16px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
                         }
                         h3{
-                            text-align: center;
+                            margin-bottom: 4px;
                         }
                         p{
                             @include body-02;
                             color: $text-medium;
-                            text-align: center;
                         }
                     }
-                }
-                .aut-box:hover {
-                    background-color: $author-bg-hover;
+                &.carousel-box:hover {
+                    background-color: $cat-bg-hover;
+                    border: solid 1px $cat-bg-hover;
                     cursor: pointer;
+                }
                 }
                 .hidden{
                     display: none;
                 }
-            }
+            }   
         }
     }
 }

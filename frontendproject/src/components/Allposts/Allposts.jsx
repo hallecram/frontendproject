@@ -1,52 +1,33 @@
+import { Link } from 'react-router-dom';
+
 import './AllPosts.scss';
-import AllPostsData from './AllPostsData';
+import PostData from '../../assets/data/PostData';
    
 const Allposts = () => {
 
-    const AllPostsData =
-        {
-          id: 1,
-          src: "../../assets/img/img01.jpg",
-          description: "Slider 01",
-          postedOn: "Travel",
-          title: "8 Figma design systems that you can download for free today",
-          author: "Floyd Miles",
-          date: "November 15, 2022",
-          caption:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, ut! Libero, perferendis aspernatur aliquam quibusdam totam sed.",
-        };
-    
+    //map para o conteudo do array
+    const PostList = 
+        PostData.map((postElem) => {
+        const {postId,author,date,postTitle} = postElem;
+        return(
+            <div key={postId}>
+                <Link to={`/blog/${postId}`}>
+                    <div className="post-caption">
+                        <p className="ftpost-label">By <span>{postElem.author}</span> | {postElem.date}</p>
+                        <h3>{postElem.postTitle}</h3>
+                    </div>
+                </Link>
+            </div>
+        )})
+
     return (
         <div className="allposts-container">
             <div className="allposts-title">
                 <h2>All Posts</h2>
-                <a href="/blog">View All</a>
+                <Link to="/blog">View All</Link>
             </div>
             <div className="allposts-box">
-                <div className="post-caption">
-                    <p className="ftpost-label">By <span>{AllPostsData.author}</span> | {AllPostsData.date}</p>
-                    <h3>{AllPostsData.title}</h3>
-                </div>
-                <div className="post-caption">
-                    <p className="ftpost-label">By <span>{AllPostsData.author}</span> | {AllPostsData.date}</p>
-                    <h3>{AllPostsData.title}</h3>
-                </div>
-                <div className="post-caption">
-                    <p className="ftpost-label">By <span>{AllPostsData.author}</span> | {AllPostsData.date}</p>
-                    <h3>{AllPostsData.title}</h3>
-                </div>
-                <div className="post-caption">
-                    <p className="ftpost-label">By <span>{AllPostsData.author}</span> | {AllPostsData.date}</p>
-                    <h3>{AllPostsData.title}</h3>
-                </div>
-                <div className="post-caption">
-                    <p className="ftpost-label">By <span>{AllPostsData.author}</span> | {AllPostsData.date}</p>
-                    <h3>{AllPostsData.title}</h3>
-                </div>
-                <div className="post-caption">
-                    <p className="ftpost-label">By <span>{AllPostsData.author}</span> | {AllPostsData.date}</p>
-                    <h3>{AllPostsData.title}</h3>
-                </div>
+                {PostList}
             </div>
             
         </div>

@@ -1,17 +1,16 @@
 import { useState } from 'react';
-import AutData from '../../assets/data/AutData';
-import Social from '../Social/Social'
+import CatData from '../../assets/data/CatData';
 
-import './MobileAuthors.scss';
-   
-const MobileAuthors = ({authors}) => {
+import './MobileCarousel.scss';
+
+function MobileCarousel({categories}){
     
-    //useState para o carousel
+    //useState para o slider
     const [currentCard, setCurrentCard] = useState(1);
 
     //callback functions para as setas
     const nextCard = ()=>{
-        if(currentCard === (authors.length - 1)){
+        if(currentCard === (categories.length - 1)){
             return
         }
         else{
@@ -28,40 +27,41 @@ const MobileAuthors = ({authors}) => {
     };
 
     //se o array não for o DataLoader ou se array não tiver valores
-    if (!Array.isArray(AutData) || authors.length <= 0){
+    if (!Array.isArray(CatData) || categories.length <= 0){
         return null;
     }
 
     //map para o conteudo do array
-    const AuthorList = AutData.map((element, index) => {
-        const {photo, authorName, job} = element;
+    const CatList = CatData.map((element, index) => {
+        const {photo, catName, caption} = element;
 
         return(
             <div 
-                className={ currentCard === index || currentCard === index + 1 ? 'aut-box' : 'aut-box hidden' }
+                className={ currentCard === index || currentCard === index + 1 ? 'carousel-box' : 'carousel-box hidden' }
                 key={index}
             >
-                <div className="txt-wrapper" >
-                <img src={photo} alt={authorName} />
-                <h3>{authorName}</h3>
-                <p>{job}</p> 
+                <div className="txt-wrapper">
+                    <div className="img-wrapper">
+                        <img src={photo} alt={`${catName}'s pic`}/>
+                    </div>
+                    <h3>{catName}</h3>
+                    <p>{caption}</p> 
                 </div>
-                <Social />
             </div>
         )
-    })   
+    })  
 
-    return(
-        <div className="aut-container">
-            <div className="aut-title">
-                <h2>Authors</h2>
+    return (
+        <div className="carousel-container">
+            <div className="carousel-title">
+                <h2>Choose a Category</h2>
             </div>
-            <div className="aut-wrapper">
+            <div className="cat-wrapper">
                 <div className="box-wrapper">
-                        {AuthorList}
+                    {CatList}
                 </div>
                 {/* SETAS */}
-                <div className="aut-arrows">
+                <div className="cat-arrows">
                     <div className="arrows-wrapper">
                         <div className="prev">
                             <img src="../../assets/img/arrow.svg" className="prev-arrow" alt="prevArrow" onClick={prevCard}/>
@@ -71,9 +71,10 @@ const MobileAuthors = ({authors}) => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>  
-    )
+            </div> 
+        </div>
+    );
 }
 
-export default MobileAuthors
+
+export default MobileCarousel;
