@@ -1,10 +1,68 @@
 @import '../../assets/sass/main.scss';
 
 
-//DESKTOP
+//DESKTOP MIN 1440PX
 .imgslider-container{
     width: 100%;
     position: relative;
+    .imgslider-arrows-wrapper{
+        width: calc(100% - 4.444vw);
+        height: 100%;
+        padding: 0 2.222vw;
+        position: absolute;
+        z-index: 5;
+        .imgslider-arrows{
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .prev-arrow{
+                width: 35px;
+                height: auto;
+                opacity: .4;
+                transform: rotate(180deg);
+                cursor: pointer;
+            }
+            .prev-arrow:hover{
+                opacity: .9;
+                transform: rotate(180deg) scale(125%);
+            }
+            .next-arrow{
+                width: 35px;
+                height: auto;
+                opacity: .4;
+                cursor: pointer;
+            }
+            .next-arrow:hover{
+                opacity: .9;
+                transform: scale(125%);
+            }
+            .imgslider-dots{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-self: flex-end;
+                margin-bottom: 2.222vw;
+                .dots{
+                    color: #fff;
+                    opacity: .4;
+                    font-size: 16px;
+                    margin: 0 0.694vw;
+                    cursor: pointer;
+                }
+                .dots:hover{
+                    opacity: .9;
+                }
+                .dots-active{
+                    color: #fff;
+                    opacity: .9;
+                    font-size: 16px;
+                    margin: 0 0.694vw;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
     .img-slider{
         width: 100%;
         height: 720px;
@@ -36,8 +94,8 @@
         top: 0;
         left: 3rem;
         .txt-slider{
-            height: calc(100% - 256px);
-            padding: 128px 80px;
+            height: calc(100% - 17.778vw);
+            padding: 8.889vw 5.556vw;
             .txt-wrapper{
                 width: 60%;
                 color: $text-light;
@@ -70,26 +128,40 @@
             }
         } 
     }
-    .prev{
-        position: absolute;
-        left: 3rem;
-        top: 50%;
-        transform: translateY(-50%);
-        //font-size: 1rem;
-        //color: blue;
-        z-index: 5;
-        cursor: pointer;
-        user-select: none;
+}
+
+//TABLET > DESKTOP
+@media screen and (min-width: $tablet) and (max-width: $desktop){
+    .imgslider-container{
+        min-width: $tablet;
+        max-width: $desktop;
+        .txt-container{
+            .txt-slider{
+                .txt-wrapper{
+                    width: 80%;
+                }
+                .slider-btn-wrapper{
+                    width: 50%;
+                }
+            }
+        }
     }
-    .next{
-        position: absolute;
-        right: 3rem;
-        top: 50%;
-        transform: translateY(-50%);
-        //font-size: 1rem;
-        //color: blue;
-        z-index: 5;
-        cursor: pointer;
-        user-select: none;
+}
+
+//TABLET
+@media screen and (min-width: $mobile) and (max-width: $tablet){
+    .imgslider-container{
+        min-width: $mobile;
+        max-width: $tablet;
+        .txt-container{
+            .txt-slider{
+                .txt-wrapper{
+                    width: 80%;
+                }
+                .slider-btn-wrapper{
+                    width: 50%;
+                }
+            }
+        }
     }
 }

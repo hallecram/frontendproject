@@ -11,12 +11,17 @@ const Slider = ({slides})=>{
     const length = slides.length;
 
     //callback functions para as setas
-    const nextSlide = ()=>{
+    const nextSlide = () => {
         setCurrentSlide(currentSlide === length - 1 ? 0 : currentSlide + 1)
     };
-    const prevSlide = ()=>{
+    const prevSlide = () => {
         setCurrentSlide(currentSlide === 0 ? length - 1 : currentSlide - 1)
     };
+
+    const goToSlide = (index) => {
+       setCurrentSlide(index);
+    };
+
 
     //se o array não for o SliderData ou se array não tiver valores
     if (!Array.isArray(SliderData) || slides.length <= 0){
@@ -24,14 +29,25 @@ const Slider = ({slides})=>{
     }
             
     return(
-        <div className="imgslider-container">            
-            <div className="prev">
-                {/* img a substituir seta - prev*/}
-                <input type="button" value="prev" id="prevBtn" onClick={prevSlide}></input>
-            </div>
-            <div className="next">
-                {/* img a substituir seta - next*/}
-                <input type="button" value="next" id="nextBtn" onClick={nextSlide}></input>   
+        <div className="imgslider-container">
+            <div className="imgslider-arrows-wrapper">
+                <div className="imgslider-arrows">
+                    <div className="prev">
+                        <img src="../../assets/img/arrowslider.svg" className="prev-arrow" alt="prevArrow" onClick={prevSlide}/>
+                    </div>
+                    <div className="imgslider-dots">
+                        {SliderData.map((slideElement, index) => {
+                            return(
+                                <div key={index} className={index === currentSlide ? "dots-active" : "dots"} onClick={() => goToSlide(index)}>
+                                    &#11044;
+                                </div>
+                            )
+                        })}
+                    </div>
+                    <div className="next">
+                        <img src="../../assets/img/arrowslider.svg" className="next-arrow" alt="nextArrow" onClick={nextSlide}/>
+                    </div>
+                </div>
             </div>
             <div>
                 {SliderData.map((slideElement, index) => {
