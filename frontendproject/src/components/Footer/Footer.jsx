@@ -20,7 +20,7 @@ function Footer(){
                             <Link to="/blog" className="text-link">Blog</Link>
                         </li>
                         <li>
-                            <Link to="/aboutus" className="text-link">About Us</Link>
+                            <Link to="/about" className="text-link">About Us</Link>
                         </li>
                         <li>
                             <Link to="/contact" className="text-link">Contact Us</Link>
@@ -36,7 +36,7 @@ function Footer(){
                     <h2>Subscribe to our newsletter to get the latest updates and news</h2>
                 </div>
                 <div className="subs-form">
-                    <input className="dark-input" placeholder="Enter Your Email"></input>
+                    <input className="dark-input" name="subs-email" placeholder="Enter Your Email"></input>
                     <Btn value="Subscribe" color="btn"></Btn>
                 </div>                   
             </div>

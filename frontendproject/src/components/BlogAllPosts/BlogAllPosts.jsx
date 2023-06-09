@@ -9,16 +9,13 @@ function BlogAllPosts({posts}){
     //useState para o renderizar novamente a lista
     //const [data, setData] = useState([]);
 
-    //useState para o fetch
-    //const [loading, setLoading] = useState(false);
-
     //useState para a pagination
     const [currentPage, setCurrentPage] = useState(1);
+
     //useState para nr posts por página
     const [postsPerPage, setPostsPerPage] = useState(5);
 
-    const [pageNumberLimit, setPageNumberLimit] = useState(5);
-    const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
+    const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(3);
     const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
 
     //se o array não for o PostData ou se array não tiver valores
@@ -29,7 +26,6 @@ function BlogAllPosts({posts}){
     //get current posts
     const indexLastPost = currentPage * postsPerPage;
     const indexFirstPost = indexLastPost - postsPerPage;
-    //const currentPosts = posts.slice(indexFirstPost, indexLastPost); --> usar quando houver fetch
     
 
     //map para o conteudo do array
@@ -58,7 +54,6 @@ function BlogAllPosts({posts}){
     for(let i = 1; i <= Math.ceil(posts.length / postsPerPage); i++){
         PageNumbers.push(i);
     }
-
      
     //handle click for each page
     const handleClick = (eventArgs) => {
@@ -67,38 +62,34 @@ function BlogAllPosts({posts}){
 
     //change page
     const handleNextBtn = () => {
-        setCurrentPage(currentPage + 1);
-        if(currentPage + 1 > maxPageNumberLimit){
-            setMaxPageNumberLimit(maxPageNumberLimit + pageNumberLimit);
-            setMinPageNumberLimit(minPageNumberLimit + pageNumberLimit);
+        if(currentPage !== maxPageNumberLimit){
+            setCurrentPage(currentPage + 1)
         }
     };
     const handlePrevBtn = () => {
-        setCurrentPage(currentPage - 1);
-        if((currentPage - 1) % pageNumberLimit === 0){
-            setMaxPageNumberLimit(maxPageNumberLimit - pageNumberLimit);
-            setMinPageNumberLimit(minPageNumberLimit - pageNumberLimit);
+        if(currentPage !== 1){
+            setCurrentPage(currentPage - 1)
         }
     };
 
     //pagination of page numbers
-    // const Pagination = PageNumbers.map((number) => {
-    //     if(number < maxPageNumberLimit + 1 && number > minPageNumberLimit){
-    //         return(
-    //             <li 
-    //                 key={number} 
-    //                 id={number}
-    //                 onClick={handleClick}
-    //                 className={currentPage === number ? "active" : null}
-    //             >
-    //                 {number}
-    //             </li>
-    //         );
-    //     }
-    //     else{
-    //         return null;
-    //     }   
-    // });
+    const Pagination = PageNumbers.map((number) => {
+        if(number < maxPageNumberLimit + 1 && number > minPageNumberLimit){
+            return(
+                <li 
+                    key={number} 
+                    id={number}
+                    onClick={handleClick}
+                    className={currentPage === number ? "number active" : "number"}
+                >
+                    {number}
+                </li>
+            );
+        }
+        else{
+            return null;
+        }   
+    });
  
     return (
         <div className="blog-allposts-container">
@@ -114,7 +105,7 @@ function BlogAllPosts({posts}){
                     <h5 className="prev-arrow" onClick={handlePrevBtn}>
                         &lt; Prev
                     </h5>
-                    {/* {Pagination} */}
+                    <h5 className="pages">{Pagination}</h5>
                     <h5 className="next-arrow" onClick={handleNextBtn}>
                         Next &gt;
                     </h5>

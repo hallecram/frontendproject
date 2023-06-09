@@ -3,7 +3,7 @@ import BlogFtPost from "../components/BlogFtPost/BlogFtPost";
 import Carousel from "../components/Carousel/Carousel";
 import Join from "../components/Join/Join";
 
-import CatData from "../components/Carousel/CatData";
+import CatData from "../assets/data/CatData";
 import PostData from "../assets/data/PostData";
 
 const Blog = () => {

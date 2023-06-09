@@ -24,7 +24,7 @@ const [tab, setTab] = useState("t1"); //o meu ponto zero no caso das tabs é a p
                             <p className="cap">About Us</p>
                             <h2>We are a community of content writers who share their learnings</h2>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eaque, facere explicabo iure totam ipsam earum reprehenderit voluptatem nisi.</p>
-                            <a href="/aboutus">Read More &gt;</a>
+                            <a href="/about" className="link-color">Read More &gt;</a>
                         </article>
                         <article className="article">
                             <p className="cap">Our Mission</p>

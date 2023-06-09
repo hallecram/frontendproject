@@ -1,6 +1,6 @@
 import './Carousel.scss';
 import { useState } from 'react';
-import CatData from './CatData';
+import CatData from '../../assets/data/CatData';
 
 function Carousel({categories}){
     

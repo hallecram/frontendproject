@@ -2,6 +2,8 @@ import Post from "../components/Post/Post";
 import Join from "../components/Join/Join";
 import ReadNext from "../components/ReadNext/ReadNext";
 
+import PostData from "../assets/data/PostData";
+
 import '../assets/sass/main.scss'
 
 const BlogPost = (props) => {
@@ -30,7 +32,7 @@ const BlogPost = (props) => {
                     postLi3 = {props.postLi3}/>
             </section>
             <section className="readnext-section">
-                <ReadNext />
+                <ReadNext data={PostData}/>
             </section>
             <section className="join-section">
                 <Join />

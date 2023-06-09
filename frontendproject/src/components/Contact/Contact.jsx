@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import CatData from '../../assets/data/CatData';
 import './Contact.scss';
 
 function Contact(){
@@ -19,7 +20,6 @@ function Contact(){
     }
 
     useEffect(() => {
-        console.log(formError);
         if(Object.keys(formError).length === 0 && formSubmit){
             console.log(formValue);
         }
@@ -73,9 +73,7 @@ function Contact(){
             </div>
             <div className="contact-form">
                 {Object.keys(formError).length === 0 && formSubmit ? (
-                    <div classNme="form-success">
-                        <p>Thanks for your contact! Your message have been sent successfully!</p>
-                    </div>
+                        <p className="form-success">Thanks for your contact! Your message have been sent successfully!</p>
                 ): null}
                 <form onSubmit={handleSubmit}>
                     <p className="form-error">{formError.fullname}</p>
@@ -104,10 +102,14 @@ function Contact(){
                         value={formValue.subject} 
                         onChange={handleChange}
                     >
-                        <option value="value0"></option>
-                        <option value="value1">Lorem, ipsum dolor.</option>
-                        <option value="value2">Lorem, ipsum.</option>
-                        <option value="value3">Lorem ipsum dolor sit.</option>
+                        <option value="none"></option>
+                        {CatData.map((catData, catIndex) => {
+                            const {id,catName} = catData;
+                            return(
+                                <option key={id} value={catName}>{catName}</option>
+                            )
+                        }
+                        )}
                     </select>
                     <p className="form-error">{formError.message}</p>
                     <textarea 
@@ -127,10 +129,3 @@ function Contact(){
 }
 
 export default Contact
-
-//BACKUP
-// if(!values.fullname){
-//     Error.fullname = "Please, enter your full name";
-// }else if(values.fullname.length < 3){
-//     Error.fullname = "Full name must be more than 3 digits";
-// }

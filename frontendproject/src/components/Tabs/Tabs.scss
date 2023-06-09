@@ -43,6 +43,16 @@
                 a{
                     @include btn-font
                 }
+                .link-color{
+                    color: $span;
+                  }
+                  .link-color:visited,.link-color:active{
+                    color: $span;
+                  }
+                  .link-color:hover{
+                    color: $span;
+                    text-decoration: underline;
+                  }
             }
         }
     }

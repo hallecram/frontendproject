@@ -1,6 +1,5 @@
 @import '../../assets/sass/main.scss';
 
-
 //DESKTOP MAX 1440PX
 .contact-container{
     width: 100%;
@@ -52,13 +51,13 @@
             flex-direction: column;
             .input{
                 @include body-01;
-                width: calc(100% - 3.333vw);
+                width: calc(100% - 1vw);
                 height: auto;
                 background-color: transparent;
                 border: 1px solid $border;
                 border-radius: 8px;
                 margin: 0.556vw 0;
-                padding: 1.667vw;
+                padding: 0.45vw;
             }
             .btn{
                 width: 100%;
@@ -66,7 +65,7 @@
                 border: 1px solid $span-y;
                 border-radius: 8px;
                 margin: 0.556vw 0;
-                padding: 1.667vw;
+                padding: 0.694vw;
             }
             .select{
                 @include body-01;
@@ -75,14 +74,48 @@
                 border: 1px solid $border;
                 border-radius: 8px;
                 margin: 0.556vw 0;
-                padding: 1.667vw;
+                padding: 0.694vw;
+            }
+            .form-control:focus{
+                outline: 0;
             }
             .form-error{
                 @include body-02;
-                color: crimson;
-                padding: 0.694vw;
-                margin-top: 1.667vw; 
+                color: $contact-error;
             }
+            .form-success{
+                @include body-02;
+                color: $contact-success;
+            }
+            .hidden{
+                display: none;
+            }
+        }
+    }
+}
+
+//TABLET
+@media screen and (min-width: $mobile) and (max-width: $tablet){
+    .contact-container{
+        min-width: $mobile;
+        max-width: $tablet;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .contact-title{
+            width: 85%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-box{
+            width: calc(85% - 8.889vw);
+            .info-box{
+                width: 85%;
+            }
+        }
+        .contact-form{
+            width: 85%;
         }
     }
 }

@@ -34,10 +34,10 @@ const PostData = [
         altImgAuthor: "Floyd Miles",
         date: "May 03, 2023",
         postTitle: "Morbi leo urna molestie at elementum eu facilisis",
-        imgCategory: "../../assets/img/travel.png",
+        imgCategory: "../../assets/img/startup.png",
         altImgCategory: "Travel",
         category: "Travel",
-        imgPost: "../../assets/img/img01.jpg",
+        imgPost: "../../assets/img/img02.jpg",
         altImgPost: "imgPost2",
         postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
@@ -65,7 +65,7 @@ const PostData = [
         imgCategory: "../../assets/img/tecnology.png",
         altImgCategory: "Technology",
         category: "Technology",
-        imgPost: "../../assets/img/img01.jpg",
+        imgPost: "../../assets/img/img03.jpg",
         altImgPost: "imgPost3",
         postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
@@ -93,7 +93,7 @@ const PostData = [
         imgCategory: "../../assets/img/economy.png",
         altImgCategory: "Economy",
         category: "Economy",
-        imgPost: "../../assets/img/img01.jpg",
+        imgPost: "../../assets/img/img04.png",
         altImgPost: "imgPost4",
         postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
@@ -114,14 +114,14 @@ const PostData = [
     {
         postId: 5,
         author: "Diane Russell",
-        imgAuthor: "../../assets/img/drussel.png",
+        imgAuthor: "../../assets/img/drussell.png",
         altImgAuthor: "Diane Russell",
         date: "January 28, 2023",
         postTitle: "nulla malesuada pellentesque elit eget gravida cum sociis",
         imgCategory: "../../assets/img/business.png",
         altImgCategory: "Business",
         category: "Business",
-        imgPost: "../../assets/img/img01.jpg",
+        imgPost: "../../assets/img/img05.png",
         altImgPost: "imgPost5",
         postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
@@ -149,7 +149,7 @@ const PostData = [
         imgCategory: "../../assets/img/startup.png",
         altImgCategory: "Startup",
         category: "Startup",
-        imgPost: "../../assets/img/img01.jpg",
+        imgPost: "../../assets/img/img06.png",
         altImgPost: "imgPost6",
         postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
@@ -177,7 +177,7 @@ const PostData = [
         imgCategory: "../../assets/img/business.png",
         altImgCategory: "Business",
         category: "Business",
-        imgPost: "../../assets/img/img01.jpg",
+        imgPost: "../../assets/img/img07.png",
         altImgPost: "imgPost7",
         postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
@@ -202,10 +202,10 @@ const PostData = [
         altImgAuthor: "Floyd Miles",
         date: "July 03, 2022",
         postTitle: "Diam ut venenatis tellus in metus vulputate eu",
-        imgCategory: "../../assets/img/travel.png",
+        imgCategory: "../../assets/img/startup.png",
         altImgCategory: "Travel",
         category: "Travel",
-        imgPost: "../../assets/img/img01.jpg",
+        imgPost: "../../assets/img/img08.png",
         altImgPost: "imgPost8",
         postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
@@ -233,7 +233,7 @@ const PostData = [
         imgCategory: "../../assets/img/economy.png",
         altImgCategory: "Economy",
         category: "Economy",
-        imgPost: "../../assets/img/img01.jpg",
+        imgPost: "../../assets/img/img09.png",
         altImgPost: "imgPost9",
         postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
@@ -261,7 +261,7 @@ const PostData = [
         imgCategory: "../../assets/img/startup.png",
         altImgCategory: "Startup",
         category: "Startup",
-        imgPost: "../../assets/img/img01.jpg",
+        imgPost: "../../assets/img/img02.jpg",
         altImgPost: "imgPost10",
         postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
@@ -286,10 +286,10 @@ const PostData = [
         altImgAuthor: "Leslie Alexander",
         date: "January 10, 2022",
         postTitle: "Nulla malesuada pellentesque elit eget gravida cum sociis",
-        imgCategory: "../../assets/img/travel.png",
+        imgCategory: "../../assets/img/startup.png",
         altImgCategory: "Travel",
         category: "Travel",
-        imgPost: "../../assets/img/img01.jpg",
+        imgPost: "../../assets/img/img03.jpg",
         altImgPost: "imgPost11",
         postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
@@ -317,7 +317,7 @@ const PostData = [
         imgCategory: "../../assets/img/economy.png",
         altImgCategory: "Economy",
         category: "Economy",
-        imgPost: "../../assets/img/img01.jpg",
+        imgPost: "../../assets/img/img04.png",
         altImgPost: "imgPost12",
         postCaption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         postSubtitle1: 
@@ -335,7 +335,6 @@ const PostData = [
         postLi3: 
             "Neque egestas congue quisque egestas",
     }, 
-
   ];
   
   export default PostData;

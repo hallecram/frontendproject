@@ -1,7 +1,7 @@
 import './Slider.scss';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import SliderData from './SliderData';
+import SliderData from '../../assets/data/SliderData';
 import Btn from '../Btn/Btn';
 
 const Slider = ({slides})=>{

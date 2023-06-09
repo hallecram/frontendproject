@@ -1,0 +1,114 @@
+@import './variables';
+
+//upload fonts
+@font-face{
+    font-family: 'sen-regular';
+    src: url(../../fonts/Sen-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'sen-bold';
+    src: url(../../fonts/Sen-Bold.ttf);
+}
+
+@font-face{
+    font-family: 'sen-extrabold';
+    src: url(../../fonts/Sen-ExtraBold.ttf);
+}
+
+//mixins
+@mixin display{
+    font-family: 'sen-bold';
+    font-size: 3rem;
+    line-height: 4rem;
+    margin: 1.667vw 0 1.111vw 0;
+}
+
+@mixin body-01{
+    font-family: 'sen-regular';
+    font-size: 1rem;
+    line-height: 1.8rem;
+}
+
+@mixin body-02{
+    font-family: 'sen-regular';
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+}
+
+@mixin cap-regular{
+    font-family: 'sen-regular';
+    font-size: 1rem;
+    line-height: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.19rem;
+}
+
+@mixin cap{
+    font-family: 'sen-bold';
+    font-size: 1rem;
+    line-height: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.19rem;
+}
+
+@mixin label-txt{
+    font-family: 'sen-regular';
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+}
+
+@mixin btn-font{
+    font-family: 'sen-bold';
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+
+//headings
+h1, h2, h3, h4, h5, h6{
+    font-family: 'sen-bold';
+}
+
+h1{
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+h2{
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+h3{
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+
+h4{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+h5{
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+}
+
+h6{
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+//text
+p{
+    font-family: 'sen-regular';
+}
+
+a, li{
+    font-family: 'sen-regular';
+    margin: 1.111vw 0;
+}
+
+span{
+    color: $span;
+}

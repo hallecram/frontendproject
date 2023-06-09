@@ -22,7 +22,7 @@
                 position: unset;
                 .arrows-wrapper{
                     display: flex;
-                    justify-content: center;
+                    justify-content: space-around;
                     align-self: flex-end;
                     .prev-arrow{
                         transform: rotate(180deg);
@@ -114,7 +114,7 @@
                 position: unset;
                 .arrows-wrapper{
                     display: flex;
-                    justify-content: center;
+                    justify-content: space-around;
                     align-self: flex-end;
                     .prev-arrow{
                         transform: rotate(180deg);

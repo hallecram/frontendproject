@@ -13,8 +13,8 @@ const Allposts = () => {
             <div key={postId}>
                 <Link to={`/blog/${postId}`}>
                     <div className="post-caption">
-                        <p className="ftpost-label">By <span>{postElem.author}</span> | {postElem.date}</p>
-                        <h3>{postElem.postTitle}</h3>
+                        <p className="ftpost-label">By <span>{author}</span> | {date}</p>
+                        <h3>{postTitle}</h3>
                     </div>
                 </Link>
             </div>
@@ -24,14 +24,12 @@ const Allposts = () => {
         <div className="allposts-container">
             <div className="allposts-title">
                 <h2>All Posts</h2>
-                <Link to="/blog">View All</Link>
+                <Link to="/blog" className="link-color">View All</Link>
             </div>
             <div className="allposts-box">
                 {PostList}
             </div>
-            
         </div>
-        
     );
 }
 

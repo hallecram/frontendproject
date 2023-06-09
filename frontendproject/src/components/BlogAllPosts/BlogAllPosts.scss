@@ -1,9 +1,7 @@
 @import "../../assets/sass/main.scss";
 
-
 //DESKTOP 1440PX
   .blog-allposts-container {
-    //width: 100%;
     height: auto;
     padding: 5.556vmax;
     .blog-allposts-title {
@@ -26,11 +24,12 @@
         gap: 32px;
         .img-wrapper{
           width: 40%;
-          height: auto;
+          height: 400px;
           flex-shrink: 1;
           img{
             width: 100%;
             height: 100%;
+            object-position: center;
             object-fit: cover;
           }
         }
@@ -51,21 +50,40 @@
       .arrows-wrapper{
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 32px;
         margin-top: 2.222vmax;
         .prev-arrow{
-          color: $border;
+          color: $text-medium;
           cursor: pointer;
         }
         .prev-arrow:hover{
-          color: #000;
+          color: $text-dark;
           transform: scale(125%);
         }
+        .pages{
+          display: flex;
+          gap: 8px;
+          .number{
+            color: $text-medium;
+            cursor: pointer;
+          }
+          .number.active{
+            color: $text-dark;
+            transform: scale(125%);
+          }
+          .number:hover{
+            color: $text-dark;
+            transform: scale(125%);
+          }
+        }
+        
         .next-arrow{
-          color: #000;
+          color: $text-medium;
           cursor: pointer;
         }
         .next-arrow:hover{
+          color: $text-dark;
           transform: scale(125%);
         }
       }
@@ -78,7 +96,6 @@
     min-width: $xs-mobile;
     max-width: $mobile;
     .blog-allposts-box {
-      //overflow: visible;
       .post-caption {
         width: 100%;
         height: auto;
@@ -95,54 +112,3 @@
     }
   }
 }
-
-
-
-
-
-
-//BACKUP
-// .blog-allposts-container {
-//   width: 100%;
-//   height: auto;
-//   margin-top: 80px;
-//   .blog-allposts-title {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     margin-bottom: 32px;
-//   }
-//   .blog-allposts-box {
-//     margin-top: 64px;
-//     display: flex;
-//     flex-direction: column;
-//     gap: 64px;
-//     overflow: visible;
-//     .post-caption {
-//       width: 100%;
-//       height: auto;
-//       display: flex;
-//       flex-direction: row;
-//       flex-wrap: wrap;
-//       gap: 32px;
-//       .img-wrapper{
-//         width: 40%;
-//         height: auto;
-//         img{
-//           object-fit: cover;
-//         }
-//       }
-//       .txt-wrapper{
-//         width: 50%;
-//         height: auto;
-//         display: flex;
-//         flex-direction: column;
-//         flex-wrap: wrap;
-//         .cat-cap{
-//           @include cap;
-//           color: $span;
-//         }
-//       }
-//     }
-//   }
-// }

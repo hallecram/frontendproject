@@ -1,13 +1,12 @@
-import './Authors.scss';
 import { useState } from 'react';
-import AutData from './AutData';
 import Social from '../Social/Social'
+
+import './Authors.scss';
    
 const Authors = ({authors}) => {
     
     //useState para o carousel
     const [currentCard, setCurrentCard] = useState(3);
-    //const length = authors.length;
 
     //callback functions para as setas
     const nextCard = ()=>{
@@ -28,13 +27,12 @@ const Authors = ({authors}) => {
     };
 
     //se o array não for o DataLoader ou se array não tiver valores
-    if (!Array.isArray(AutData) || authors.length <= 0){
+    if (!Array.isArray(authors) || authors.length <= 0){
         return null;
     }
 
-
     //map para o conteudo do array
-    const AuthorList = AutData.map((element, index) => {
+    const AuthorList = authors.map((element, index) => {
         const {photo, authorName, job} = element;
 
         return(
@@ -72,56 +70,9 @@ const Authors = ({authors}) => {
                         </div>
                     </div>
                 </div>
-            </div>
-
-            
+            </div>            
         </div>  
     )
 }
-
-
-    /*
-    //callback functions para as setas
-    const nextCard = ()=>{
-        setCurrent(current === length - 1 ? 0 : current + 1)
-    };
-    const prevCard = ()=>{
-        setCurrent(current === 0 ? length - 1 : current - 1)
-    };
-    
-  
-
-    const AuthorList = AutData.map((element) => {
-        const {id, photo, authorName, job} = element;
-
-        return(
-            <div className="aut-box" key={id}>
-                <div className="txt-wrapper" >
-                <img src={photo} alt={`photo of ${authorName}`} />
-                <h3>{authorName}</h3>
-                <p>{job}</p> 
-                </div>
-                <Social />
-            </div>
-        )
-    })    
-        
-    return (
-        <div className="aut-container">
-            <div className="aut-title">
-                <h2>Authors</h2>
-            </div>
-            <div className="box-wrapper">
-                {AuthorList}
-            </div>
-            <div className="arrows">
-                <button id="prevBtn" onClick={prevCard}>Prev</button>
-                <button id="nextBtn" onClick={nextCard}>Next</button>
-            </div>
-        </div>
-    );
-}
-*/
-
 
 export default Authors
