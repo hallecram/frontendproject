@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import PostData from "../../assets/data/PostData";
 
 import './BlogAllPosts.scss';
    
@@ -30,7 +29,7 @@ function BlogAllPosts({posts}){
 
     //map para o conteudo do array
     const PostList = 
-        PostData.slice(indexFirstPost, indexLastPost).map((postElem) => {
+        posts.slice(indexFirstPost, indexLastPost).map((postElem) => {
         const {postId,imgPost,altImgPost,category,postTitle,postCaption} = postElem;
         return(
             <div key={postId}>

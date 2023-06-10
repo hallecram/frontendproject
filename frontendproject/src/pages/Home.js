@@ -12,7 +12,7 @@ import Join from "../components/Join/Join";
 import MobileAuthors from "../components/MobileAuthors/MobileAuthors";
 import MobileCarousel from "../components/MobileCarousel/MobileCarousel";
 
-import SliderData from '../assets/data/SliderData';
+import PostData from '../assets/data/PostData';
 import TestData from "../assets/data/TestData";
 import CatData from "../assets/data/CatData";
 import AutData from "../assets/data/AutData";
@@ -24,7 +24,7 @@ const Home = () => {
     return (
         <div>
             <section className="slider-section">
-                <Slider slides={SliderData}/>
+                <Slider slides={PostData}/>
             </section>
             <section className="posts-section">
                 <FtPost /><AllPosts />

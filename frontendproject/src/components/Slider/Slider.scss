@@ -88,13 +88,21 @@
         transition-duration: 0.5s;
     }
     .txt-container{
+        width: 85%;
+        height: 85%;
+        margin: 0 auto;
         position: absolute;
-        z-index: 4;
-        top: 0;
+        z-index: 6;
+        top: 3rem;
         left: 3rem;
+        right: 3rem;
+        bottom: 3rem;
         .txt-slider{
             height: calc(100% - 17.778vw);
             padding: 8.889vw 5.556vw;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-evenly;
             .txt-wrapper{
                 width: 60%;
                 color: $text-light;
@@ -102,6 +110,9 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                .slider-caption{
+                    display: flex;
+                }
                 h6{
                     @include cap-regular;
                     span{
@@ -124,6 +135,7 @@
             }
             .slider-btn-wrapper{
                 width: 30%;
+                z-index: 6;
             }
         } 
     }
@@ -137,7 +149,9 @@
         .txt-container{
             .txt-slider{
                 .txt-wrapper{
-                    width: 80%;
+                    .slider-caption{
+                        display: flex;
+                    }
                 }
                 .slider-btn-wrapper{
                     width: 50%;
@@ -156,9 +170,34 @@
             .txt-slider{
                 .txt-wrapper{
                     width: 80%;
+                    .slider-caption{
+                        display: flex;
+                    }
                 }
                 .slider-btn-wrapper{
                     width: 50%;
+                }
+            }
+        }
+    }
+}
+
+//MOBILE
+@media screen and (min-width: $xs-mobile) and (max-width: $mobile){
+    .imgslider-container{
+        min-width: $xs-mobile;
+        max-width: $mobile;
+        .txt-container{
+            width: 80%;
+            .txt-slider{
+                .txt-wrapper{
+                    width: 100%;
+                    .slider-caption{
+                        display: none;
+                    }
+                }
+                .slider-btn-wrapper{
+                    width: 75%;
                 }
             }
         }

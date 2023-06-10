@@ -1,8 +1,8 @@
-import './Slider.scss';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
-import SliderData from '../../assets/data/SliderData';
 import Btn from '../Btn/Btn';
+
+import './Slider.scss';
 
 const Slider = ({slides})=>{
 
@@ -24,7 +24,7 @@ const Slider = ({slides})=>{
 
 
     //se o array não for o SliderData ou se array não tiver valores
-    if (!Array.isArray(SliderData) || slides.length <= 0){
+    if (!Array.isArray(slides) || slides.length <= 0){
         return null;
     }
             
@@ -36,7 +36,7 @@ const Slider = ({slides})=>{
                         <img src="../../assets/img/arrowslider.svg" className="prev-arrow" alt="prevArrow" onClick={prevSlide}/>
                     </div>
                     <div className="imgslider-dots">
-                        {SliderData.map((slideElement, index) => {
+                        {slides.map((slideElem, index) => {
                             return(
                                 <div key={index} className={index === currentSlide ? "dots-active" : "dots"} onClick={() => goToSlide(index)}>
                                     &#11044;
@@ -50,25 +50,27 @@ const Slider = ({slides})=>{
                 </div>
             </div>
             <div>
-                {SliderData.map((slideElement, index) => {
+                {slides.map((slideElem, postId) => {
                     return (
                         <div
-                            className={index === currentSlide ? "current-slide active" : "current-slide"}
-                            key={index}
+                            className={postId === currentSlide ? "current-slide active" : "current-slide"}
+                            key={postId}
                         >
-                            {index === currentSlide && <img src={slideElement.src} className="img-slider" alt={slideElement.description}/>}
+                            {postId === currentSlide && <img src={slideElem.imgPost} className="img-slider" alt={slideElem.altImgPost}/>}
                             <div className="img-gradient"></div>
                             <div className="txt-container">
-                            {index === currentSlide && 
+                            {postId === currentSlide && 
                                 <div className="txt-slider"> 
                                     <div className="txt-wrapper">
-                                        <h6>Posted on <span>{slideElement.postedOn}</span></h6>
-                                        <h2 className="display-txt">{slideElement.title}</h2>
-                                        <p>By <span>{slideElement.author}</span> | {slideElement.date}</p>
-                                        <p>{slideElement.caption}</p>
+                                        <h6>Posted on <span>{slideElem.category}</span></h6>
+                                        <h2 className="display-txt">{slideElem.postTitle}</h2>
+                                        <p>By <span>{slideElem.author}</span> | {slideElem.date}</p>
+                                        <p className="slider-caption">{slideElem.postCaption}</p>
                                     </div>
                                     <div className="slider-btn-wrapper">
-                                        <Link to="/post01"><Btn value="Read more &gt;" color="btn" /></Link>
+                                        <Link to={`/blog/${slideElem.postId}`}>
+                                            <Btn value="Read more &gt;" color="btn" />
+                                        </Link>
                                     </div>
                                 </div>}
                             </div>
