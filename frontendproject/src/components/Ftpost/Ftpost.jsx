@@ -1,30 +1,41 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './FtPost.scss';
 import Btn from '../Btn/Btn';
+import React from 'react';
    
-const Ftpost = () => {
-    const ftPostData = {
-        id: 1,
-        src: '../../assets/img/ftpost01.png',
-        description: 'Featured Post',
-        postedOn: 'Travel',
-        title: '15 Ways to Work Overseas',
-        author: 'John Doe',
-        date: 'April 30, 2023',
-        caption: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, ut! Libero, perferendis aspernatur aliquam quibusdam totam sed.'
-    };
+const Ftpost = ({posts}) => {
+
+    const randomIdx = Math.floor(Math.random() * posts.length);
+    const [currentPost, setCurrentPost] = useState(randomIdx);
+
+    const FtPost = 
+        posts.map((postElem, postId) => {
+            return(
+                <div key={postId}>
+                    {postId === currentPost &&
+                    <div className="ftpost-box">
+                        <div className="ftpost-img">
+                            <img src={postElem.imgPost} alt={postElem.altImgPost} />
+                        </div>
+                        <p className="ftpost-label">By <span>{postElem.author}</span> | {postElem.date}</p>
+                        <h3>{postElem.postTitle}</h3>
+                        <p>{postElem.postCaption}</p>
+                        <div className="btn-wrapper">
+                            <Link to={`/blog/${postElem.postId}`}>
+                                <Btn value="Read more &gt;" color="btn" />
+                            </Link>
+                        </div>
+                    </div>
+                    }
+                </div>
+            )
+        });
     
     return (
         <div className="ftpost-container">
             <h2>Featured Post</h2>
-            <div className="ftpost-box">
-                <div className="ftpost-img"></div>
-                <p className="ftpost-label">By <span>{ftPostData.author}</span> | {ftPostData.date}</p>
-                <h3>{ftPostData.title}</h3>
-                <p>{ftPostData.caption}</p>
-                <div className="btn-wrapper">
-                    <Btn value="Read more &gt;" color="btn" />
-                </div>
-            </div>
+            {FtPost}
         </div>
         
     );

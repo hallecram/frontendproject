@@ -27,7 +27,7 @@ const Home = () => {
                 <Slider slides={PostData}/>
             </section>
             <section className="posts-section">
-                <FtPost /><AllPosts />
+                <FtPost posts={PostData}/><AllPosts />
             </section>
             <section className="tabs-section" id="Tabs">
                 <Tabs />
