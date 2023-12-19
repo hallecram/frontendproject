@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './AllPosts.scss';
 import PostData from '../../assets/data/PostData';
    
-const Allposts = () => {
+const AllPosts = () => {
 
     //map para o conteudo do array
     const PostList = 
@@ -33,4 +33,4 @@ const Allposts = () => {
     );
 }
 
-export default Allposts;
+export default AllPosts;

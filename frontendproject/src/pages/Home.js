@@ -1,6 +1,6 @@
 import Slider from "../components/Slider/Slider";
 import FtPost from "../components/FtPost/FtPost";
-import AllPosts from "../components/Allposts/AllPosts";
+import AllPosts from "../components/AllPosts/AllPosts";
 import Tabs from "../components/Tabs/Tabs";
 import SpecialPost from "../components/SpecialPost/SpecialPost";
 import Carousel from "../components/Carousel/Carousel";
