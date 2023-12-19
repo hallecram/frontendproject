@@ -4,12 +4,12 @@ import './FtPost.scss';
 import Btn from '../Btn/Btn';
 import React from 'react';
    
-const Ftpost = ({posts}) => {
+const FtPost = ({posts}) => {
 
     const randomIdx = Math.floor(Math.random() * posts.length);
     const [currentPost, setCurrentPost] = useState(randomIdx);
 
-    const FtPost = 
+    const Ftpost = 
         posts.map((postElem, postId) => {
             return(
                 <div key={postId}>
@@ -35,10 +35,10 @@ const Ftpost = ({posts}) => {
     return (
         <div className="ftpost-container">
             <h2>Featured Post</h2>
-            {FtPost}
+            {Ftpost}
         </div>
         
     );
 }
 
-export default Ftpost;
+export default FtPost;
